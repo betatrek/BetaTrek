@@ -112,7 +112,37 @@ $(document).ready(function() {
 	});
 	
 	// Adds Chosen widget to the Zip Code selection field
-	$(".zip-chzn").chosen({no_results_text: "No matching zip code found."}).change(
+	$(".zip-chzn").chosen({no_results_text: "No matching ZIP code found."}).change(
+				  function() {
+					// can't select nothing, so hides the error
+					var id = $(this).attr('id');
+					id = '#' + id;
+					portfolio.validate().element(id);
+					$(id).valid();
+	});
+	
+	// Adds Chosen widget to the Terms selection field
+	$(".terms-chzn").chosen({no_results_text: "No matching terms found."}).change(
+				  function() {
+					// can't select nothing, so hides the error
+					var id = $(this).attr('id');
+					id = '#' + id;
+					portfolio.validate().element(id);
+					$(id).valid();
+	});
+	
+	// Adds Chosen widget to the Property Type selection field
+	$(".prop-type-chzn").chosen({no_results_text: "No matching type found."}).change(
+				  function() {
+					// can't select nothing, so hides the error
+					var id = $(this).attr('id');
+					id = '#' + id;
+					portfolio.validate().element(id);
+					$(id).valid();
+	});
+	
+	// Adds Chosen widget to the Equivalent Type selection field
+	$(".cash-type-chzn").chosen({no_results_text: "No matching type found."}).change(
 				  function() {
 					// can't select nothing, so hides the error
 					var id = $(this).attr('id');
