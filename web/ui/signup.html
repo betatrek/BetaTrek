@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	  	<meta name="author" content="Dandré Allison" />
+	  	<meta name="description" content="betatrek: algorithmic investment advice sign up page." />
+	    <title>betatrek > create account</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <!-- CSS -->
+	    <link rel="stylesheet" type="text/css" href="css/signup.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/chosen.min.css" />
+        <!--[if IE]>
+			<style type="text/css"> 
+				#boxes { zoom: 1}
+                #creation_title, #create_account { overflow: hidden}
+                #create_account { height: 367px}
+                #create { -3.7em}
+                #create_account input.checkbox { 16.8em}
+            </style>
+        <![endif]-->
+	    <!-- jQuery libraries -->
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	    <script type="text/javascript">
+	    	// This will use the local jQuery file if google's hosted file isn't loaded
+	        if (!window.jQuery) {
+	        	document.write(unescape("%3Cscript src='js/jquery-1.6.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	        }
+	    </script>
+	    <!--<script type="text/javascript" src="js/jquery.watermark.min.js"></script>-->
+	    <!--<script type="text/javascript" src="js/jquery.client.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/chosen.jquery.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/jquery.chroma-hash.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/jquery.validate.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/jquery.showpass.min.js"></script>-->
+	    <!-- Personal jQuery files -->
+	    <script type="text/javascript" src="js/signup.min.js"></script>
+    </head>
+
+        <body>
+            <div id="content">
+                <!-- investub logo -->
+                <div id="logo">
+                    <a href="index.html"><span /></a>
+                <!-- #logo --></div>
+
+                <!-- sign in bar--> 
+                <div id="signin_bar">
+                    <form id="signin" action="controller/login">
+                        <input type="text" class="email required" id="signin_email" name="u" />
+                        <input type="password" class="password required" id="signin_pass" maxlength="24" name="p" />
+                        <input type="submit" name="signin" class="img" />
+                        <input type="button" class="checkbox img" id="remember_me" name="remember_me" />
+                        <label for="remember_me">Remember me</label>
+                    </form>
+                    <span id="recovery_link"><a href="#recovery" name="recovery" class="modal">Forgot it?</a></span>
+					<div id="signin_errors">
+						<ul></ul>
+					<!-- #signin_errors--></div>
+                <!-- #signin_bar --></div>
+
+                <!-- sign up box -->
+                <div id="signup_box">
+                    <form id="signup" action="">
+                        <input type="text" class="email img" />
+                        <!--<label for="signup_pass"></label>-->
+                        <input type="password" class="password img" id="signup_pass" maxlength="24"/>
+                        <input type="submit" name="creation" class="modal img" />
+                    </form>
+                <!-- #signup_box --></div>
+
+                <!-- modal windows -->
+                <div id="boxes">
+                    <!-- recovery window -->
+                    <div id="recovery" class="window img">
+                        <form name="recovery" action="">
+                            <input type="text" class="email img" />
+                            <input type="submit" class="password_request img" />
+                        </form>
+
+                        <!-- close button -->
+                        <input type="button" class="close img" />
+                    <!-- #recovery --></div>
+
+                    <!-- creation window -->
+                    <div id="creation" class="window">
+                        <div id="logo_copy" class="img"></div>
+                        <div id="creation_title">create a new account</div>
+                        <form id="create_account" method="post" action="controller/user/addUser">
+                            <label for="email">Your Email</label>
+                            <input type="text" id="email" />
+                            <label for="password">Password</label>
+                            <input type="password" id="password" maxlength="24" />
+                            <label for="country">Country</label>
+                            <select data-placeholder="Choose a country..." class="chzn-select" id="country"></select>
+                            <label for="state">State</label>
+                            <select data-placeholder="Choose a state..." id="state" class="chzn-select"></select>
+                            <input type="button" class="checkbox img" id="agree" name="agree" />
+                            <label for="agree">
+                                Yes, I agree to the Investub.com
+                                <a href="tou.html">Terms of Use</a>
+                            </label>
+                            <input type="submit" id="create" class="img"/>
+                        </form>
+                    <!-- #creation --></div>
+
+                    <!-- used to fill the screen for modal window -->
+                    <div id="mask"></div> 
+                <!-- #boxes--></div>
+            <!-- #content--></div>
+	</body>
+</html>

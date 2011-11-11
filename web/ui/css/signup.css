@@ -1,0 +1,499 @@
+/* Object class default styling */
+input[type="button"], input[type="submit"] {
+    cursor: pointer; /* hand-shaped cursor */
+    cursor: hand;    /* for IE 5.x */
+    border: 0;
+    padding: 0;
+	color: transparent; /* hide the button text */
+}
+
+input:focus, select:focus {
+    outline: none; /* Get rid of the automatic borders in Chrome */
+}
+
+.idle {
+    background-color: #eeeeee;
+    border-color: #333333;
+}
+
+.active {
+    background-color: #ffffff;
+    border-color: #4a8af4;
+}
+
+.invalid {
+	background-color: #EE2C2C;
+}
+
+.valid {
+	background-color: #698B22;
+}
+
+#country_chzn .invalid, #state_chzn .invalid {
+	border-color: #EE2C2C;
+}
+
+#country_chzn .valid, #state_chzn .valid {
+	border-color: #698B22;
+}
+
+.show-password-link {
+  	display: block;
+  	position: absolute;
+	padding: 1px;
+  	z-index: 11;
+	color: #8d8d8d;
+    text-decoration: none;
+}
+	
+	a:hover {
+		color: #4a8af4;
+	}
+
+.chroma-hash {
+	position: absolute;
+}
+
+label.error {
+	color: #cc0000;
+}
+
+.img {
+	background-image: url(../images/sprite.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	/* gets rid of automatic imagery around image */
+    border: 0;
+	margin: 0;
+}
+
+input.checkbox {
+    float: left;
+	background-position: 0px 1px;
+    /*background: url('../images/checkbox_default.png') no-repeat;*/
+    width: 14px;
+    height: 14px;
+    display: inline;
+    margin: 2px 6px 0 0;
+}
+
+	input.checked {
+		background-position: -18px 1px;
+	    /*background: url('../images/checkbox_checked.png') no-repeat;*/
+	    width: 14px;
+	    height: 14px;
+	}
+
+/* Sign-up page CSS */
+body {
+    font-family: "Helvetica Neue LT Pro 45 Light";
+    font-size: 1em;
+    font-weight: normal;
+    background-color: #0f0f0f;
+    padding: 0;
+    margin: 0;
+}
+
+	#content {
+		/*background-position: 0px 0px;*/
+		background: url('../images/background.jpg') no-repeat;
+		overflow: auto;
+		width: 884.88px;
+		height: 892.89px;
+		margin: 0 auto;
+		padding: 22px 40px 0;
+	}
+
+		/* logo */
+		#logo {
+		    width: 314px;
+		    height: 52px;
+		    float: left;
+		    position: relative;
+		    cursor: pointer; /* hand-shaped cursor */
+		    cursor: hand;    /* for IE 5.x */
+		}
+
+			#logo span {
+			    position: absolute;
+			    width: 100%;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    z-index: 1;
+			}
+
+		/* positioning the signin elements */
+		#signin_bar {
+		    float: left;
+		    width: 322px;
+		    position: relative;
+		    left: 263px;e     
+		}
+
+			/* styling the signin elements */
+			#signin_email, #signin_pass {
+			    font-size: .65em;
+			    border-style: solid;
+			    float: left;
+			    width: 110px;
+			    height: 20px;
+			    padding-left: 4px;
+			    margin-right: 8px;
+			}
+			
+				label[for='signin_email'], label[for='signin_pass'] {
+					position: absolute;
+				}
+				
+				#signin_bar .watermark {
+					width: 110px;
+				}
+
+			input[name="signin"] {
+			    float: left;
+				background-position: -762.92px 0px;
+			    /*background: url('../images/signin_button_default.png') no-repeat;*/
+			    display: inline;
+			    width: 64px;
+			    height: 28px;
+			}
+
+				input[name="signin"].hover {
+				    background-position: -830.91px 0px;
+					/*background: url('../images/signin_button_hover.png') no-repeat;*/
+				}
+
+				input[name="signin"].click {
+				    /*background: url('../images/signin_button_click.png') no-repeat;*/
+				}
+
+			label[for="remember_me"], #recovery_link a {
+			    color: #8d8d8d;
+			    font-size: 10px;
+			    text-decoration: none;
+			    font-weight: bold;
+			    float: left;
+			    margin-right: 46px;
+			    margin-top: 5px;
+			}
+
+				label[for="remember_me"].hover, #recovery_link a:hover {
+				    color: #4a8af4;
+				}
+				
+			#signin_errors {
+				color: #cc0000;
+				width: 100%;
+				position: absolute;
+				top: 47px;
+				left: -24px;
+			}
+
+		/* sign up positioning */
+		#signup_box {
+		    text-align: center;
+		    clear: left;
+		    position: relative;
+		    float: left;
+		    margin-top: 475px;
+		    margin-left: 93px;
+		    width: 224px;
+		}
+
+			/* sign up box styling */
+			#signup_box .email, #signup_box .password, #recovery .email {
+			    margin: 0 auto;
+			    height: 38px;
+			    width: 221px;
+			    margin-bottom: 2px;
+			    text-align: center;
+			    border: 0;
+			}
+
+				#signup_box .idle, #recovery .idle {
+					background-position: -441.97px -39px;
+				    /*background: url('../images/signup_input_default2.png') no-repeat;*/
+				}
+
+				#signup_box .active, #recovery .active {
+					background-position: -666.97px -39px;
+				    /*background: url('../images/signup_input_focus2.png') no-repeat;*/
+				}
+
+			#signup_box [name="creation"] {
+				background-position: -420.925px 0px;
+			    /*background: url('../images/submit_button_default.png') no-repeat;*/
+			    width: 168.979px;
+			    height: 35.996px;
+			    margin: 5px auto 0 auto;
+			}
+
+				#signup_box [name="creation"].hover {
+					background-position: -591.904px 0px;
+				    /*background: url('../images/submit_button_hover.png') no-repeat;*/
+				}
+
+				#signup_box [name="creation"].click {
+				    /*background: url('../images/submit_button_clicked.png') no-repeat;*/
+				}
+
+		/* modal window styling */
+		#mask {
+		    position: absolute;
+		    z-index: 9000; /* #mask must be lower than #boxes .window */
+		    background-color: #000;
+		    display: none;
+		    left: 0px;
+		    top: 0px;
+		}
+
+		.window {
+		    position: absolute;
+		    display: none;
+		    z-index: 9999; /* #mask must be lower than #boxes .window */
+		}
+
+			/* Customizes the modal windows */
+			#recovery {
+			    color: #fff;
+				background-position: 0px -89px;
+			    /*background: url('../images/forgotten_pass.png') no-repeat;*/
+			    width: 322px;
+			    height: 206px;
+			    text-align: center;
+			    padding-top: 5.5em;
+			}
+
+			#creation {
+			    color: #fff;
+			    font-family: "Helvetica Neue LT Pro 75 Bold";
+			    text-align: center;
+			    width: 621px;
+			    height: 527px;
+			}
+
+			/* recovery window close button positioning */
+			#recovery .close {
+			    position: relative;
+			    top: -220px;
+			}
+
+			/* Email address input field */
+			#recovery .email {
+			    margin: 0 auto .42em;
+			}
+
+			/* Close modal window button */
+			.close {
+			    background-position: -34px 0px;
+				/*background: url('../images/close_button_default.png') no-repeat;*/
+			    width: 22px;
+			    height: 22px;
+			}
+
+				.close.hover {
+					background-position: -55px 0px;
+				    /*background: url('../images/close_button_hover.png') no-repeat;*/
+				}
+
+				.close.click {
+				    /*background: url('../images/close_button_clicked.png') no-repeat;*/
+				}
+
+			.password_request {
+			    background-position: -78px 0px;
+				/*background: url('../images/email_button_default.png') no-repeat;*/
+			    width: 169px;
+			    height: 35px;
+				margin: 0 auto;
+			    padding: 0;
+			}
+
+				/* password request button */
+				.password_request.hover {
+				    background-position: -249.98px 0px;
+					/*background: url('../images/email_button_hover.png') no-repeat;*/
+				}
+
+				.password_request.click {
+				    /*background: url('../images/email_button_clicked.png') no-repeat;*/
+				}
+
+			/* create account form positioning */
+			#logo_copy {
+			    width: 272px;
+			    height: 44px;
+			    margin: 0 auto;
+			}
+				
+			#creation_title {
+			    position: relative;
+			    top: 1.5em;
+			    height: 1.7em;
+			    padding-top: .55em;
+			    top: .6em;
+			    width: 100%;
+			}
+
+			#create_account {
+			    position: relative;
+			    top: 1.3em;
+			    padding-top: 4.5em;
+			    width: 100%;
+			    font-size: .8em;
+			    height: 348px;
+			}
+
+				#create_account label {
+				    display: block;
+				    float: left;
+				    text-align: right;
+				    width: 17em;
+				    margin: .5em .9em 0 0;
+				}
+					
+					/* create account error messages */
+					#create_account label.error {
+						left: 18em;
+						text-align: left;
+						position: absolute;
+						margin: 0;
+					}
+				
+					label.error[for='email'] {
+						top: 2em;
+					}
+					
+					label.error[for='password'] {
+						top: 7em;
+					}
+					
+					label.error[for='country'] {
+						top: 11em;
+					}
+					
+					label.error[for='state'] {
+						top: 16em;
+					}
+					
+					label.error[for='agree'] {
+						top: 21em;
+					}
+
+				#create_account input, select {
+				    float: left;
+				    margin: .1em 7em 2.96em 0;
+				}
+					
+					.creation_show_button {
+						position: absolute;
+					}
+
+				#create {
+				    position: relative;
+				    top: 3em;
+				    left: -3.7em;
+				}
+
+				#create_account input.checkbox {
+				    clear: both;
+				    margin: .3em .5em 2.96em 20.6em;
+				}
+				
+				#create_account label[for="agree"] {
+					width: 20em;
+					text-align: left;
+				}
+
+			/* create account form styling */
+			#logo_copy {
+				background-position: -322.96px -88.99px;
+			    /*background: url('../images/logo.png');*/
+			}
+
+			#creation_title {
+			    font-family: "Garamond Premier Pro 45 pt";
+			    background-color: #484848;
+			    font-size: 1.7em;
+			    background: #484848; /* Old browsers */
+			    background: -moz-linear-gradient(top, #484848 0%, #484848 50%, #0f0f0f 51%, #0f0f0f 100%); /* FF3.6+ */
+			    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(50%,#484848), color-stop(51%,#0f0f0f), color-stop(100%,#0f0f0f)); /* Chrome,Safari4+ */
+			    background: -webkit-linear-gradient(top, #484848 0%,#484848 50%,#0f0f0f 51%,#0f0f0f 100%); /* Chrome10+,Safari5.1+ */
+			    background: -o-linear-gradient(top, #484848 0%,#484848 50%,#0f0f0f 51%,#0f0f0f 100%); /* Opera11.10+ */
+			    background: -ms-linear-gradient(top, #484848 0%,#484848 50%,#0f0f0f 51%,#0f0f0f 100%); /* IE10+ */
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#0f0f0f',GradientType=0 ); /* IE6-9 */
+			    background: linear-gradient(top, #484848 0%,#484848 50%,#0f0f0f 51%,#0f0f0f 100%); /* W3C */
+			}
+
+			#create_account {
+			    background: #000;
+			    /* Fallback for web browsers that doesn't support RGBa */
+			    background: rgb(0, 0, 0);
+			    /* RGBa with 0.6 opacity */
+			    background: rgba(0, 0, 0, 0.7);
+			    /* For IE 5.5 - 7*/
+			    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
+			    /* For IE 8*/
+			    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000)";
+			    /* Bottom rounded border */
+				-webkit-border-bottom-right-radius: 10px;
+			    -webkit-border-bottom-left-radius: 10px;
+			    -moz-border-radius-bottomright: 10px;
+			    -moz-border-radius-bottomleft: 10px;
+			    border-bottom-right-radius: 10px;
+			    border-bottom-left-radius: 10px;
+			}
+
+			#creation input, select {
+			    border-style: solid;
+			}
+			
+			#country, #state {
+				width: 14em;
+			}
+
+			a[href="tou.html"] {
+			    color: #4a8af4;
+			    text-decoration: none;
+			}
+
+				a[href="tou.html"]:active {
+				    color: #333333;
+				}
+
+				a[href="tou.html"]:hover {
+				    text-decoration: underline;
+				}
+
+			#create {
+				background-position: 0px -39px;
+			    /*background: url('../images/signup_button_default.png') no-repeat;*/
+			    width: 218px;
+			    height: 48px;
+				border-style: none;
+			}
+
+				#create.hover {
+					background-position: -221px -39px;
+				    /*background: url('../images/signup_button_hover.png') no-repeat;*/
+				}
+
+				#create.clicked {
+				    /*background: url('../images/signup_button_clicked.png') no-repeat;*/
+				}
+
+/* footer styling */
+footer {
+    height: 3em;
+    background: #000;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000)";
+
+}

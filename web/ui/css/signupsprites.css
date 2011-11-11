@@ -1,0 +1,50 @@
+#content {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/background.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -10px;
+}
+button[name="signin"] {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/signin_button_default.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -945px;
+}
+button.checkbox {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/checkbox_default.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -993px;
+}
+#signup_box .idle, #recovery .idle {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/signup_input_default2.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -1029px;
+}
+#signup_box button {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/submit_button_default.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -1087px;
+}
+#recovery {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/forgotten_pass.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -1142px;
+}
+.password_request {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/email_button_default.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -1366px;
+}
+.close {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/close_button_default.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -1421px;
+}
+#logo_copy {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/logo.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: 0px -1450px;
+}
+#create {
+  background-image: url(http://www.cs.pomona.edu/~dallison/web/ui/images/signup_button_default.png);
+  background-image: url(../images/spriteme1.png);
+  background-position: -10px -1504px;
+}
