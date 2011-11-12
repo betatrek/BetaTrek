@@ -5,7 +5,8 @@ $(document).ready(function() {
 		accordion_clicked,
 		skip_button = $(".skip"),
 		continue_button = $('#continue'),
-		portfolio = $('#portfolio');
+		portfolio = $('#portfolio'),
+		INDEX_REGEX = /\d+/;
 	// Set up displays that only work with jQuery running
 	search_watermark.show();
 	$('.arrow, .grey-arrow').addClass('right');
@@ -36,10 +37,7 @@ $(document).ready(function() {
 	});
 	
 	// Switches the skip button to a continue button when the user inputs data
-	$("form[name='portfolio'] input").focus(function(){
-		skip_button.hide();
-		continue_button.show();
-	});
+	$("form#portfolio input").focus(portfolioRowFocus);
 	
 	// Navigation animation
 	$('nav a:not(.subnav a)').click(function(e){
@@ -150,4 +148,28 @@ $(document).ready(function() {
 					portfolio.validate().element(id);
 					$(id).valid();
 	});
+	
+	function portfolioRowFocus() {
+		skip_button.hide();
+		continue_button.show();
+		
+		// Adds a new row to the form when last row of a section is entered
+		var parent = $(this).parent();
+		if (parent.hasClass('last_row')) { 
+			var row = parent.clone(),
+			    children = row.children()
+				index = parseInt(children.first().attr('for').match(INDEX_REGEX)) + 1;
+			children.each(function() {
+				if ($(this).is('label')) {
+                	$(this).attr('for', $(this).attr('for').replace(INDEX_REGEX, index));
+				} else {
+					$(this).attr('id', $(this).attr('id').replace(INDEX_REGEX, index))
+					       .focus(portfolioRowFocus);;
+				}
+            });
+			parent.removeClass('last_row'); 
+			row.addClass('last_row');
+			parent.after(row);
+		}
+	}
 });

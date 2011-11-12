@@ -860,7 +860,7 @@ header, section, footer, aside, nav, article, figure {
 	width: 1600px;
 }
 
-.stocks label, .ets label, .funds label, .bonds label, .equivalents label, .estate label {
+.stocks label, .etfs label, .funds label, .bonds label, .equivalents label, .estate label {
 	margin: 0 8px 8px 25px;	
 }
 
