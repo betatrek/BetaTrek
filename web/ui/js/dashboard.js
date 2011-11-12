@@ -105,12 +105,13 @@ $(document).ready(function() {
 		$(this).find('div').removeClass('active');
 	});
 	
-	$('.zip-chzn').load('../res/zipcode_select.html', function() {
-		alert('loaded');
+	$.get('../res/zipcode_select.html', function(data) {
+    	$('.zip-chzn').html(data);
+    	alert(data);
 	});
 	
 	// Adds Chosen widget to the Zip Code selection field
-	$(".zip-chzn").chosen({no_results_text: "No matching ZIP code found."}).change(
+	/*$(".zip-chzn").chosen({no_results_text: "No matching ZIP code found."}).change(
 				  function() {
 					// can't select nothing, so hides the error
 					var id = $(this).attr('id');
@@ -147,7 +148,7 @@ $(document).ready(function() {
 					id = '#' + id;
 					portfolio.validate().element(id);
 					$(id).valid();
-	});
+	});*/
 	
 	function portfolioRowFocus() {
 		skip_button.hide();

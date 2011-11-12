@@ -1,19 +1,22 @@
-<!-- InstanceBegin template="/Templates/betatrek_template.dwt" codeOutsideHTMLIsLocked="true" --><!DOCTYPE HTML>
+<!-- InstanceBegin template="/Templates/betatrek_setup_template.dwt" codeOutsideHTMLIsLocked="false" --><!DOCTYPE HTML>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>betatrek >  Create Account > Portfolio Information</title>
+<title>betatrek > Create Account > Input Assets</title>
+<!-- InstanceEndEditable -->
+
 <meta name="description" content="">
 <meta name="author" content="Dandre Allison">
+<!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-
 <!--[if lte IE 7]>
     <style>
         .content { margin-right: -1px} /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
@@ -21,22 +24,320 @@
     </style>
     <![endif]-->
 <script src="js/libs/modernizr-2.0.6.min.js"></script>
-<!-- InstanceParam name="side_menu" type="boolean" value="false" -->
 </head>
 
 <body>
-
-    <div class="container">
-      <!-- Header Bar -->
-      <header> <a href="#">betatrek</a>
-        <div class="header-buttons"> <a href="#">
-          <div class="header-button">Account Settings</div>
-          </a> <a href="#">
-            <div class="header-button">Log Out</div>
-            </a> <a href="#">
-              <div class="header-button">Get Help</div>
-            </a> </div>
+	<div class="container">
+     <!-- Header Bar -->
+ 	 <header> 
+     	<a href="#">betatrek</a>
+        
+        <div class="header-buttons"> 
+        	<a href="#">
+          		<div class="header-button">Account Settings</div>
+          	</a>
+            <a href="#">
+            	<div class="header-button">Log Out</div>
+            </a>
+            <a href="#">
+            	<div class="header-button">Get Help</div>
+            </a> 
+        <!-- .header-buttons --></div>
       </header>
       
-	<!-- .container --></div>
+	  
+	  <div id="content">
+      	<!-- InstanceParam name="step" type="text" value="step2" -->
+        <div class="progress step2 clearfix">
+        	<div class="triangle firstEnd"></div>
+            <span class="first">1. Create Account</span>
+            <div class="triangle firstBegin"></div>
+            <span class="second">2. Input Assets</span>
+            <div class="triangle secondBegin"></div>
+            <span class="third">3. Select Risks</span>
+            <div class="triangle thirdBegin"></div>
+        <!-- .progress --></div>
+        <div class="clearfloat"></div>
+        
+        <!-- InstanceBeginEditable name="form_description" -->
+        <form id="portfolio" method="post" action="">
+        <!-- InstanceEndEditable -->
+        	<div class="buttons clearfix">
+                <a href="#"><div class="skip">
+                    <div class="skipTriangle"></div>
+                    <div class="skipB skipTriangle"></div>
+                    <span class="skipText">Skip</span>
+                <!-- .skip --></div></a>
+                <!--<a class="button" href="#">Skip</a>-->
+                <a class="button" id="continue" href="#">Continue</a>
+            <!-- .buttons --></div>
+            <div class="clearfloat"></div>
+            
+	  		<!-- InstanceBeginEditable name="input" -->
+            <div class="accordion">
+                <!-- Wrapped each group so hover animation can occur on a groups -->
+                <ul>
+                  <div>
+                  <a href="#"><li>
+                    <div class="grey-arrow"></div>
+                    Stocks
+                  </li></a>
+                    <div class="subnav">
+                        <div class="stocks">
+                            <div class="clearfix last_row">
+                            I purchased 
+                            <label for="equityQuantity0" class="visuallyhidden">
+                                Shares
+                            </label>
+                            <input id="equityQuantity0" size="6" type="number"/>
+                            shares in 
+                            <label for="equity0" class="visuallyhidden">
+                                Stock/Ticker
+                            </label>
+                            <input id="equity0" size="4"/>
+                            stock for
+                            <label for="equityInvested0" class="visuallyhidden">
+                            	Price per Share
+                            </label>
+                            <input id="equityInvested0" size="6" type="number"/>
+                            each
+                            <!-- .clearfix --></div>
+                        <!-- .stocks --></div>	
+                    <!-- .subnav --></div>
+                    </div>
+                    <div>
+                    <a href="#"><li>
+                     <div class="grey-arrow"></div>
+                     Exchange-Traded Funds
+                    </li></a>
+                    <div class="subnav">
+                        <div class="etfs">
+                        	<div class="clearfix last_row"> 
+                            I have $
+                            <label for="etfInvested0" class="visuallyhidden">
+                            	Total Invested
+                            </label>
+                            <input id="etfInvested0" size="6" type="number"/>
+                            invested in
+                            <label for="etf0" class="visuallyhidden">
+                            	Exchange-Traded Fund
+                            </label>
+                            <input id="etf0" size="5" type="text"/>
+                            <!-- .clearfix --></div>
+                        <!-- .etfs --></div>
+                    <!-- .subnav --></div>
+                    </div>
+                    <div>
+                    <a href="#"><li>
+                     <div class="grey-arrow"></div>
+                     Mutual Funds
+                    </li></a>
+                    <div class="subnav">
+                        <div class="funds">
+                        	<div class="clearfix last_row">
+                            I have $
+                            <label for="fundInvested0" class="visuallyhidden">
+                            	Total Invested
+                            </label>
+                            <input id="fundInvested0" size="6" type="number"/>
+                            in 
+                            <label for="fund0" class="visuallyhidden">
+                            	Mutual Fund
+                            </label>
+                            <input id="fund0" size="5" type="text"/>
+                            <!-- .clearfix --></div>
+                        <!-- .etfs --></div>
+                    <!-- .subnav --></div>
+                    </div>
+                    <div>
+                    <a href="#"><li>
+                     <div class="grey-arrow"></div>
+                     Fixed Income Holdings
+                    </li></a>
+                    <div class="subnav">
+                        <div class="bonds">
+                            <!--<div class="clearfix last_row">
+                            <label for="cusip0" class="fltlft">
+                                CUSIP:
+                             </label>
+                             <input id="cusip0" class="fltlft" size="10"/>
+                             <label for="coupon0" class="fltlft">
+                                Coupon:
+                             </label>
+                             <input id="coupon0" class="fltlft" size="10"/>
+                             <label for="bondMaturity0" class="fltlft">
+                                Years to Maturity:
+                             </label>
+                             <input id="bondMaturity0" class="fltlft" size="3" type="number"/>
+                             <label for="bondInvested0" class="fltlft">
+                                Total Invested:
+                             </label>
+                             <input id="bondInvested0" class="fltlft" size="7">
+                             <label for="bondDate0" class="fltlft">
+                                Date:
+                             </label>
+                             <input id="bondDate0" class="fltlft" size="10"/>
+                             <label for="bondPrice0" class="fltlft">
+                                Price:
+                             </label>
+                             <input id="bondPrice0" class="fltlft" size="7"/>-->
+                             <!-- .clearfix --><!--</div>-->
+                             <p>Coming Soon</p>
+                        <!-- .bonds --></div>
+                     <!-- .subnav --></div>
+                     </div>
+                     
+                     <div>
+                     <a href="#"><li>
+                        <div class="grey-arrow"></div>
+                        Cash and Cash Equivalents
+                     </li></a>
+                     <div class="subnav">
+                        <div class="equivalents">
+                            <div class="clearfix last_row">
+                            On
+                            <label for="equivalentDate0" class="visuallyhidden">
+                                Purchase Date
+                            </label>
+                            <input id="equivalentDate0" size="10" />
+                            , I invested $
+                            <label for="equivalentAmount0" class="visuallyhidden">
+                                Amount Invested
+                            </label>
+                            <input id="equivalentAmount0" size="7" />
+                            in a
+                            <label for="equivalentType0" class="visuallyhidden">
+                                Holding Type
+                            </label>
+                            <select id="equivalentType0" data-placeholder="Type" class="chzn-select cash-type-chzn">
+                                <option>Certificate of Deposit</option>
+                                <option>Savings Account</option>
+                                <option>Checking Account</option>
+                            </select>
+                            with an interest of
+                            <label for="equivalentRate0" class="visuallyhidden">
+                                Interest Rate
+                            </label>
+                            <input id="equivalentRate0" size="3" />
+                            % for
+                            <label for="equivalentDuration0" class="visuallyhidden">
+                                Duration
+                            </label>
+                            <input id="equivalentDuration0" size="10" />
+                            at 
+                            <label for="equivalent0" class="visuallyhidden">
+                                Company
+                            </label>
+                            <input id="equivalent0" size="10" />
+                            <!-- .clearfix --></div>
+                        <!-- .cash --></div>
+                     <!-- .subnav --></div>
+                     </div>
+                    
+                     <div>
+                     <a href="#"><li>
+                        <div class="grey-arrow"></div>
+                        Real Estate
+                     </li></a>
+                     <div class="subnav">
+                        <div class="estate">
+                            <div class="clearfix last_row">
+                            	On
+                                <label for="estateDate0" class="visuallyhidden">
+                                    Purchase Date
+                                </label>
+                                <input id="estateDate0" size="10" />
+                                , I purchased a loan for a
+                                <label for="estateType0" class="visuallyhidden">
+                                    Property Type
+                                </label>
+                                <select id="estateType0" data-placeholder="Property Type" class="chzn-select prop-type-chzn">
+                                	<option>Single Family</option>
+                                    <option>Office</option>
+                                    <option>Multifamily</option>
+                                    <option>Industrial</option>
+                                    <option>Retail</option>
+                                    <option>Land</option>
+                                    <option>Agriculture</option>
+                                    <option>Hotel/Motel</option>
+                                </select>
+                                in the
+                                <label for="estateZip0" class="visuallyhidden">
+                                    ZIP Code
+                                </label>
+                                <select id="estateZip0" data-placeholder="ZIP Code" class="chzn-select zip-chzn"></select>
+                                area. The loan is
+                                <label for="estateTerms0" class="visuallyhidden">
+                                    Loan Terms
+                                </label>
+                                <select id="estateTerms0" data-placeholder="Terms" class="chzn-select terms-chzn">
+                                    <option>fixed</option>
+                                    <option>variable</option>
+                                </select>
+                                interest at
+                                <label for="estateRate0" class="visuallyhidden">
+                                    Interest Rate
+                                </label>
+                                <input id="estateRate0" size="3" />
+                                % for
+                                <label for="estateYears0" class="visuallyhidden">
+                                	Loan Years
+                                </label>
+                                <input id="estateYears0" size="3" type="number"/>
+                                years, and it costed $
+                                <label for="estateAmount0" class="visuallyhidden">
+                                    Loan Amount
+                                </label>
+                                <input id="estateAmount0" size="7" />
+                            <!-- .clearfix --></div>
+                        <!-- .cash --></div>
+                     <!-- .subnav --></div>
+                     </div>
+                     
+                     <div>
+                     <!--<a href="#"><li>
+                        <div class="grey-arrow"></div>
+                        Other Investments
+                     </li></a>
+                     <div class="subnav">
+                        <div class="other">
+                            Coming soon...
+                        <!-- .cash --><!--</div>-->
+                     <!-- .subnav --><!--</div>-->
+                     </div>
+                  </ul>
+              <!-- .accordion --></div>	
     
+            <div class="buttons extras">
+                <a class="button" href="#">Skip</a>
+                <a class="button" href="#">Continue</a>
+            </div>
+			<!-- InstanceEndEditable -->
+        </form>
+      <!-- #content --></div>
+	  
+      
+  <!-- .container --></div>
+    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+	<!-- scripts concatenated and minified via ant build script-->
+	<script src="js/plugins.js"></script>
+    <script src="js/dashboard.js"></script>
+    <!-- end scripts-->
+    
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    
+    <!--[if lt IE 7 ]>
+        <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+        <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+</body>
+<!-- InstanceEnd --></html>

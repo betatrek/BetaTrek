@@ -843,14 +843,22 @@ header, section, footer, aside, nav, article, figure {
 			border-left: 23px solid #4A8AF4;	
 		}
 		
+form#portfolio input {
+	border: none;
+	border-bottom: solid 1px #222;
+}
+
+form#portfolio div.clearfix {
+	text-indent: hanging;
+}
+
 .stocks, .etfs, .funds, .bonds, .equivalents, .estate {
 	padding: 5px 0 5px 30px;
 	color: #222;
-	font-weight: bold;
 	overflow-x: auto;	
 }
 
-.bonds, .equivalents {
+/*.bonds, .equivalents {
 	min-width: 1366px;
 	width: 1366px;
 }
@@ -862,7 +870,7 @@ header, section, footer, aside, nav, article, figure {
 
 .stocks label, .etfs label, .funds label, .bonds label, .equivalents label, .estate label {
 	margin: 0 8px 8px 25px;	
-}
+}*/
 
 /* =============================================================================
    Chosen css
