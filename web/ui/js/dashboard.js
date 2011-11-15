@@ -110,6 +110,24 @@ $(document).ready(function() {
     	alert(data);
 	});
 	
+	// Adds date picker to date fields
+	$('.date').each(function(index, element) {
+        element.DatePicker({
+			format:'m/d/Y',
+			date: element.val(),
+			current: element.val(),
+			starts: 1,
+			position: 'r',
+			onBeforeShow: function(){
+				element.DatePickerSetDate(element.val(), true);
+			},
+			onChange: function(formated, dates){
+				element.val(formated);
+				element.DatePickerHide();
+			}
+		});
+    });
+	
 	// Adds Chosen widget to the Zip Code selection field
 	/*$(".zip-chzn").chosen({no_results_text: "No matching ZIP code found."}).change(
 				  function() {
@@ -150,6 +168,8 @@ $(document).ready(function() {
 					$(id).valid();
 	});*/
 	
+	// Function for adding a duplicate row to a subsection of the portfolio form, with incremented
+	// ids
 	function portfolioRowFocus() {
 		skip_button.hide();
 		continue_button.show();
@@ -168,6 +188,7 @@ $(document).ready(function() {
 					       .focus(portfolioRowFocus);;
 				}
             });
+			parent.append("and");
 			parent.removeClass('last_row'); 
 			row.addClass('last_row');
 			parent.after(row);
