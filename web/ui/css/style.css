@@ -207,6 +207,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 	src: url('../res/quadranta.tff');
 }
 
+@font-face {
+	font-family: "Helvetica Neue Light";
+	src: url('../res/HelveticaNeueLTPro-Lt.otf');
+}
+
 html { 
 	height: 100%;
 }
@@ -872,6 +877,60 @@ form#portfolio .subnav .clearfix {
 	color: #222;
 	overflow-x: auto;	
 }
+
+#getInvited {
+	background: url('../images/getInvitedBackground.jpg') no-repeat,
+	            #0c0c0c;
+	width: 100%;
+	height: 100%;
+	position: relative;	
+}
+
+	#getInvited form {
+		position: absolute;
+		top: 49%;
+		left: 37%;
+		border: solid 1px #2c4377;
+		border-radius: 5px;
+		padding: 8px 12px;
+		background: #4a8af4;
+		background: linear-gradient(top, #4a8af4 0%,#4a8af4 51%,#2753aa 52%,#2753aa 100%); /* W3C */
+	}
+		
+		#getInvited #email {
+			font-family: "Helvetica Neue Light";
+			font-size: 16px;
+			text-shadow: #333;
+			color: #fff;
+			width: 183px;
+			border: solid 1px #2a58b6;
+			border-radius: 3px;
+			padding: 4px 10px;
+			background: #2753aa;
+			background: linear-gradient(top, #2753aa 0%,#4a8af4 100%);
+		}
+		
+		#getInvited button {
+			font-family: "Helvetica Neue Light";
+			color: #141414;
+			font-size: 14px;
+			line-height: 1;
+			padding: 7px 3px;	
+			background: #f3f3f3;
+			background: linear-gradient(top, #f3f3f3 0%,#8e8e8e 100%);
+			border-radius: 5px;
+			border: none;
+			margin-left: 6px;
+		}
+		
+			#getInvited button:hover {
+				color: #4a8af4;
+			}
+			
+			#getInvited button:active {
+				background: #e7e7e7;
+				background: linear-gradient(top, #e5e5e5 0%,#808080 100%);
+			}
 
 /* =============================================================================
    Datepicker css

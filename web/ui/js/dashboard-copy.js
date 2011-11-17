@@ -105,28 +105,28 @@ $(document).ready(function() {
 		$(this).find('div').removeClass('active');
 	});
 	
-	$.get('../res/zipcode_select.html', function(data) {
+	/*$.get('../res/zipcode_select.html', function(data) {
     	$('.zip-chzn').html(data);
     	alert(data);
-	});
+	});*/
 	
 	// Adds date picker to date fields
-	$('.date').each(function(index, element) {
-        element.DatePicker({
+	/*$('.date').each(function() {
+        $(this).DatePicker({
 			format:'m/d/Y',
-			date: element.val(),
-			current: element.val(),
+			date: $(this).val(),
+			current: $(this).val(),
 			starts: 1,
 			position: 'r',
 			onBeforeShow: function(){
-				element.DatePickerSetDate(element.val(), true);
+				$(this).DatePickerSetDate($(this).val(), true);
 			},
 			onChange: function(formated, dates){
-				element.val(formated);
-				element.DatePickerHide();
+				$(this).val(formated);
+				$(this).DatePickerHide();
 			}
 		});
-    });
+    });*/
 	
 	// Adds Chosen widget to the Zip Code selection field
 	/*$(".zip-chzn").chosen({no_results_text: "No matching ZIP code found."}).change(
@@ -174,7 +174,6 @@ $(document).ready(function() {
 		skip_button.hide();
 		continue_button.show();
 		
-		alert($(this).attr('id'));
 		// Adds a new row to the form when last row of a section is entered
 		var parent = $(this).parent();
 		if (parent.hasClass('last_row')) { 
@@ -189,7 +188,7 @@ $(document).ready(function() {
 					       .focus(portfolioRowFocus);;
 				}
             });
-			//parent.append("and");
+			parent.append("and");
 			parent.removeClass('last_row'); 
 			row.addClass('last_row');
 			parent.after(row);
