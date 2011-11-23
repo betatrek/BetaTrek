@@ -257,15 +257,8 @@ header {
 	padding: 14px 25px 14px 25px;
 	/* Highlight */
 	text-shadow: 0 2px 3px #FFF;
-	/* Gradient */
 	background: #fdfdfd; /* Old browsers */
-	background: -moz-linear-gradient(top, #fdfdfd 0%, #bdbdbd 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bdbdbd)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* Opera11.10+ */
-	background: -ms-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* IE10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
-	background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* W3C */
+	background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%);
 }
 
 .sidebar1 {
@@ -289,16 +282,8 @@ header {
 	padding: 10px 0;
 	width: 85%;
 	float: left;
-	/* Border radius */
-	-webkit-border-top-left-radius: 12px;
-	-moz-border-radius-topleft: 12px;
 	border-top-left-radius: 12px;
 	background: #f0f0f0;
-	/* Box Shadow */
-	-moz-box-shadow: 
-		-12px 0 16px -8px #000000;
-	-webkit-box-shadow: 
-		-12px 0 16px -8px #000000;
 	box-shadow: 
 		-12px 0 16px -8px #000000;
 	height: 100%;
@@ -322,16 +307,9 @@ nav ul li {
 	padding: 20.5px 5px 20.5px 15px;
 	border-top: 1px solid #414141; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
 	border-bottom: 1px solid #252525; /* this creates the button separation */
-	  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
-	/* Gradient */
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 	background: rgb(48,48,48); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(48,48,48,1) 0%, rgba(48,48,48,1) 50%, rgba(42,42,42,1) 51%, rgba(42,42,42,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(48,48,48,1)), color-stop(50%,rgba(48,48,48,1)), color-stop(51%,rgba(42,42,42,1)), color-stop(100%,rgba(42,42,42,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(48,48,48,1) 0%,rgba(48,48,48,1) 50%,rgba(42,42,42,1) 51%,rgba(42,42,42,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(48,48,48,1) 0%,rgba(48,48,48,1) 50%,rgba(42,42,42,1) 51%,rgba(42,42,42,1) 100%); /* Opera11.10+ */
-	background: -ms-linear-gradient(top, rgba(48,48,48,1) 0%,rgba(48,48,48,1) 50%,rgba(42,42,42,1) 51%,rgba(42,42,42,1) 100%); /* IE10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#2a2a2a',GradientType=0 ); /* IE6-9 */
-	background: linear-gradient(top, rgba(48,48,48,1) 0%,rgba(48,48,48,1) 50%,rgba(42,42,42,1) 51%,rgba(42,42,42,1) 100%); /* W3C */
+	background: linear-gradient(top, rgba(48,48,48,1) 0%,rgba(48,48,48,1) 50%,rgba(42,42,42,1) 51%,rgba(42,42,42,1) 100%);
 }
 
 nav a:link, nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
@@ -341,7 +319,6 @@ nav a:link, nav a:visited { /* grouping these selectors makes sure that your lin
 }
 
 nav a:hover { /* this changes the background and text color for both mouse and keyboard navigators */
-	/*background: #4A8AF4;*/
 	color: #4A8AF4;
 }
 
@@ -440,29 +417,12 @@ footer {
 		margin-left: 8px;
 		box-shadow: inset #F00 1px;
 		float: left;
-		/* Rounded Edge */
-		-webkit-border-radius: 25px;
-		-moz-border-radius: 25px;
 		border-radius: 25px;
-		/* Box Shadow */
-		-moz-box-shadow: 
-			inset 0 1px 1px -1px #000, /* top highlight */
-			0 1px 1px -1px #FFF; /* bottom shadow */
-	    -webkit-box-shadow: 
-			inset 0 1px 1px -1px #000, /* top highlight */
-			0 1px 1px -1px #FFF; /* bottom shadow */
 	    box-shadow: 
 			inset 0 1px 1px -1px #000, /* top highlight */
 			0 1px 1px -1px #FFF; /* bottom shadow */
-		/* Background Gradient */
 		background: #fdfdfd; /* Old browsers */
-		background: -moz-linear-gradient(top, #fdfdfd 0%, #bdbdbd 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bdbdbd)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* Opera11.10+ */
-		background: -ms-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
-		background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* W3C */
+		background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%);
 	}
 	
 	.header-button:hover {
@@ -470,15 +430,7 @@ footer {
 	}
 	
 	.header-button:active {
-		/* Background Gradient */
-		background: #f0f0f0; /* Old browsers */
-		background: -moz-linear-gradient(top, #f0f0f0 0%, #b0b0b0 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#b0b0b0)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #f0f0f0 0%,#b0b0b0 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #f0f0f0 0%,#b0b0b0 100%); /* Opera11.10+ */
-		background: -ms-linear-gradient(top, #f0f0f0 0%,#b0b0b0 100%); /* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#b0b0b0',GradientType=0 ); /* IE6-9 */
-		background: linear-gradient(top, #f0f0f0 0%,#b0b0b0 100%); /* W3C */
+		background: linear-gradient(top, #f0f0f0 0%,#b0b0b0 100%);
 	}
 	
 #search {
@@ -488,17 +440,7 @@ footer {
 	color: #C2C2C2;
 	background: #2F2F2F;
 	border: 1px #2F2F2F;
-	/* Rounded Edge */
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
-	/* Box Shadow */
-	-moz-box-shadow: 
-		inset 0 2px 2px -2px #000, /* top highlight */
-		0 1px 1px -1px #464646; /* bottom shadow */
-	-webkit-box-shadow: 
-		inset 0 1px 1px -1px #000, /* top highlight */
-		0 1px 1px -1px #464646; /* bottom shadow */
 	box-shadow: 
 		inset 0 1px 1px -1px #000, /* top highlight */
 		0 1px 1px -1px #464646; /* bottom shadow */
@@ -533,29 +475,12 @@ header, section, footer, aside, nav, article, figure {
 		margin-bottom: 10px;
 		color: #E8E8E8;
 		float: left;
-		/* Rounded Edge */
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
 		border-radius: 4px;
-		/* Box Shadow */
-		-moz-box-shadow: 
-			inset 0 1px 1px -1px #000, /* top highlight */
-			0 1px 1px -1px #FFF; /* bottom shadow */
-	    -webkit-box-shadow: 
-			inset 0 1px 1px -1px #000, /* top highlight */
-			0 1px 1px -1px #FFF; /* bottom shadow */
 	    box-shadow: 
 			inset 0 1px 1px -1px #000, /* top highlight */
 			0 1px 1px -1px #FFF; /* bottom shadow */
-		/* Background Gradient */
 		background: #8C8C8C; /* Old browsers */
-		background: -moz-linear-gradient(top, #8C8C8C 0%, #656565 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8C8C8C), color-stop(100%,#656565)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #8C8C8C 0%,#656565 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #8C8C8C 0%,#656565 100%); /* Opera11.10+ */
-		background: -ms-linear-gradient(top, #8C8C8C 0%,#656565 100%); /* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C8C8C', endColorstr='#656565',GradientType=0 ); /* IE6-9 */
-		background: linear-gradient(top, #fdfdfd 0%,#656565 100%); /* W3C */
+		background: linear-gradient(top, #8C8C8C 0%, #656565 100%);
 	}
 	
 	.button:link {
@@ -568,15 +493,8 @@ header, section, footer, aside, nav, article, figure {
 	}
 	
 	.button:active {
-		/* Background Gradient */
 		background: #7F7F7F; /* Old browsers */
-		background: -moz-linear-gradient(top, #7F7F7F 0%, #5D5D5D 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7F7F7F), color-stop(100%,#5D5D5D)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* Opera11.10+ */
-		background: -ms-linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7F7F7F', endColorstr='#5D5D5D',GradientType=0 ); /* IE6-9 */
-		background: linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* W3C */
+		background: linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%);
 	}
 
 .accordion ul {
@@ -592,29 +510,16 @@ header, section, footer, aside, nav, article, figure {
 	padding: 19.5px 5px 19.5px 15px;
 	color: #666666;
 	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px;
-	/* Gradient */
 	background: #fdfdfd; /* Old browsers */
-	background: -moz-linear-gradient(top, #fdfdfd 0%, #bdbdbd 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bdbdbd)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* Opera11.10+ */
-	background: -ms-linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* IE10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
-	background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%); /* W3C */
+	background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%);
 }
 
 .accordion li:hover, .accordion li:active, .accordion li:focus { /* this changes the background and text color */
-	/*background: #4A8AF4;*/
 	color: #4A8AF4;
 }
 
 .accordion li.active {
 	background: #fdfdfd;
-	/* Rounded Edge */
-	-webkit-border-top-left-radius: 5px;
-	-webkit-border-top-right-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-topright: 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -631,11 +536,6 @@ header, section, footer, aside, nav, article, figure {
 
 .accordion .subnav div {
 	background: #FDFDFD;
-	/* Rounded Edge */
-	-webkit-border-bottom-right-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-moz-border-radius-bottomleft: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
@@ -700,36 +600,19 @@ header, section, footer, aside, nav, article, figure {
         display: inline-block;
         border-top: 28px solid #272727;
         border-bottom: 28px solid #272727;
-        
         /* The background is used to specify the border background */
-        /* Background Gradient */
         background: #8C8C8C; /* Old browsers */
-        background: -moz-linear-gradient(top, #8C8C8C 0%, #656565 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8C8C8C), color-stop(100%,#656565)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #8C8C8C 0%,#656565 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #8C8C8C 0%,#656565 100%); /* Opera11.10+ */
-        background: -ms-linear-gradient(top, #8C8C8C 0%,#656565 100%); /* IE10+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C8C8C', endColorstr='#656565',GradientType=0 ); /* IE6-9 */
-        background: linear-gradient(top, #fdfdfd 0%,#656565 100%); /* W3C */
-    
+        background: linear-gradient(top, #8C8C8C 0%, #656565 100%);
         /* Background origin is the padding box by default.
         Override to make the background cover the border as well. */
-        -moz-background-origin: border;
         background-origin: border-box;
     
         border-left: 28px solid transparent;
     }
     
         .skipTriangle.active {
-            /* Background Gradient */
 			background: #7F7F7F; /* Old browsers */
-			background: -moz-linear-gradient(top, #7F7F7F 0%, #5D5D5D 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7F7F7F), color-stop(100%,#5D5D5D)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* Opera11.10+ */
-			background: -ms-linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* IE10+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7F7F7F', endColorstr='#5D5D5D',GradientType=0 ); /* IE6-9 */
-			background: linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); /* W3C */  
+			background: linear-gradient(top, #7F7F7F 0%,#5D5D5D 100%); 
         }
         
         .skipB {
