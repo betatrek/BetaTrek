@@ -1,18 +1,23 @@
 $(document).ready(function() {
 	var search_watermark = $('label[for="search"]'),
+		search = $('#search'),
 		time = 1000,
 		nav_clicked,
 		accordion_clicked,
 		skip_button = $(".skip"),
 		continue_button = $('#continue'),
 		portfolio = $('#portfolio'),
-		INDEX_REGEX = /\d+/;
+		INDEX_REGEX = /\d+/,
+		rsvp_watermark = $('label[for="rsvp"]'),
+		rsvp = $('#rsvp');
 	// Set up displays that only work with jQuery running
-	search_watermark.show();
+	if (search.val() == '') {search_watermark.show(); }
 	$('.arrow, .grey-arrow').addClass('right');
 	$('.subnav').slideUp(time);
 	continue_button.hide();
 	$('.extras').hide();
+	if (rsvp.val() == '') {rsvp_watermark.show(); }
+	
 	
 	// Hide the Search watermark on keypress
 	$('#search').keypress(function(event){
@@ -25,6 +30,19 @@ $(document).ready(function() {
 		// Show the Search watermark if filed is empty
 		if ($(this).val() == '')
 			search_watermark.fadeIn(time);
+	});
+	
+	// Hide the RSVP watermark on keypress
+	$('#rsvp').keypress(function(event){
+		// 13 is the enter key
+		if (event.keyCode == 13)
+			$(this).after('RSVPing....');
+		else
+			rsvp_watermark.fadeOut(time);	
+	}).blur(function(){
+		// Show the Search watermark if filed is empty
+		if ($(this).val() == '')
+			rsvp_watermark.fadeIn(time);
 	});
 	
 	skip_button.mousedown(function(e){

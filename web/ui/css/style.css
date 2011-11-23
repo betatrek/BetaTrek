@@ -897,10 +897,10 @@ form#portfolio .subnav .clearfix {
 		background: linear-gradient(top, #4a8af4 0%,#4a8af4 51%,#2753aa 52%,#2753aa 100%); /* W3C */
 	}
 		
-		#getInvited #email {
+		#getInvited #rsvp {
 			font-family: "Helvetica Neue Light";
 			font-size: 16px;
-			text-shadow: #333;
+			text-shadow: 0 1px 0 #333;
 			color: #fff;
 			width: 183px;
 			border: solid 1px #2a58b6;
@@ -910,12 +910,23 @@ form#portfolio .subnav .clearfix {
 			background: linear-gradient(top, #2753aa 0%,#4a8af4 100%);
 		}
 		
+		#getInvited label[for="rsvp"] {
+			font-family: "Helvetica Neue Light";
+			color: #fff;
+			text-shadow: 0 1px 0 #333;
+			position: absolute;
+			font-size: 18px;
+			left: 26px;
+			top: 13px;
+			cursor: text;
+		}
+		
 		#getInvited button {
 			font-family: "Helvetica Neue Light";
 			color: #141414;
-			font-size: 14px;
+			font-size: 15px;
 			line-height: 1;
-			padding: 7px 3px;	
+			padding: 8px 3px 6px;	
 			background: #f3f3f3;
 			background: linear-gradient(top, #f3f3f3 0%,#8e8e8e 100%);
 			border-radius: 5px;
