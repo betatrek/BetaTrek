@@ -95,8 +95,7 @@ $(document).ready(function() {
 		$(this).find('div').removeClass('active');
 	});*/
 	
-	// Accordion
-	// Navigation animation
+	// Accordion animation
 	$('.accordion a:not(.subnav a)').click(function(e){
 		// disable default behavior
 		e.preventDefault();
@@ -129,7 +128,7 @@ $(document).ready(function() {
 	});
 	
 	// Adds date picker to date fields
-	$('.date').each(function(index, element) {
+	/*$('.date').each(function(index, element) {
         element.DatePicker({
 			format:'m/d/Y',
 			date: element.val(),
@@ -144,7 +143,7 @@ $(document).ready(function() {
 				element.DatePickerHide();
 			}
 		});
-    });
+    });*/
 	
 	// Adds Chosen widget to the Zip Code selection field
 	/*$(".zip-chzn").chosen({no_results_text: "No matching ZIP code found."}).change(
@@ -192,19 +191,19 @@ $(document).ready(function() {
 		skip_button.hide();
 		continue_button.show();
 		
-		alert($(this).attr('id'));
 		// Adds a new row to the form when last row of a section is entered
 		var parent = $(this).parent();
 		if (parent.hasClass('last_row')) { 
 			var row = parent.clone(),
 			    children = row.children()
-				index = parseInt(children.first().attr('for').match(INDEX_REGEX)) + 1;
+				index = parseInt(children.first().attr('for').match(INDEX_REGEX)) + 1,
+				new_id;
 			children.each(function() {
 				if ($(this).is('label')) {
                 	$(this).attr('for', $(this).attr('for').replace(INDEX_REGEX, index));
 				} else {
-					$(this).attr('id', $(this).attr('id').replace(INDEX_REGEX, index))
-					       .focus(portfolioRowFocus);;
+					new_id = $(this).attr('id').replace(INDEX_REGEX, index);
+					$(this).attr('id', new_id).focus(portfolioRowFocus);;
 				}
             });
 			//parent.append("and");

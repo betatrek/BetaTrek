@@ -1,7 +1,7 @@
 Deploying the infrastructure
 ============================
 
-This is a first commit for the investub code base. It is based on spring mvc and spring jdbc. This provides the infrastructure for services that we are going to write in future. Particularly, this involves
+It is based on spring mvc and spring jdbc. This provides the infrastructure for services that we are going to write in future. Particularly, this involves
 	
 - build and deploy scripts
 - database scripts
