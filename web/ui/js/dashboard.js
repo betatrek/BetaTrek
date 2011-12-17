@@ -124,7 +124,6 @@ $(document).ready(function() {
 	
 	$.get('../res/zipcode_select.html', function(data) {
     	$('.zip-chzn').html(data);
-    	alert(data);
 	});
 	
 	// Adds date picker to date fields

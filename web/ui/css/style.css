@@ -762,17 +762,23 @@ form#portfolio .subnav .clearfix {
 }
 
 #getInvited {
-	background: url('../images/getInvitedBackground.jpg') no-repeat,
-	            #0c0c0c;
+	background: #0c0c0c;
 	width: 100%;
-	height: 100%;
 	position: relative;	
+	float: left;
 }
+	#getInvited #invitation_image {
+		background: url(../images/getInvitedBackground.jpg) no-repeat;
+		width: 1200px;
+		height: 794px;
+		margin: 0 auto;
+		position: relative;
+	}
 
 	#getInvited form {
 		position: absolute;
-		top: 49%;
-		left: 37%;
+		top: 217px;
+		left: 457px;
 		border: solid 1px #2c4377;
 		border-radius: 5px;
 		padding: 8px 12px;
