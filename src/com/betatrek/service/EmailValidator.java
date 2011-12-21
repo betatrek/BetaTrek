@@ -3,7 +3,7 @@ package com.betatrek.service;
 public class EmailValidator {
 
     private static final String LOCAL_PART_SYNTAX =
-        "^((\\w|\\d|[!#$%&'*+\\-/=?^`{}|~]|\\.\"(\\w|\\d|[!#$%&'*+\-/=?^`{}|~]|[(),:;<>@[]|\\]|\\\\( |\"|\\\\))*\"\\.|\\.)+(?<!\\.)|\"(\\w|\\d|[!#$%&'*+\\-/=?^`{}|~]|[(),:;<>@[]|\\]|\\\\( |\"|\\\\))*\")";
+        "^((\\w|\\d|[!#$%&'*+\\-/=?^`{}|~]|\\.\"(\\w|\\d|[!#$%&'*+\\-/=?^`{}|~]|[(),:;<>@[]|\\]|\\\\( |\"|\\\\))*\"\\.|\\.)+(?<!\\.)|\"(\\w|\\d|[!#$%&'*+\\-/=?^`{}|~]|[(),:;<>@[]|\\]|\\\\( |\"|\\\\))*\")";
     private static final String DOMAIN_PART_SYNTAX =
         "[a-zA-Z0-9\\-]{1,63}(?<!-)(\\.[a-zA-Z0-9\\-]{1,63}(?<!-))*";
     private static final String EMAIL_SYNTAX = LOCAL_PART_SYNTAX + "@" 
