@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.betatrek.domain.Rsvp;
 
-@Service("userService")
+@Service("rsvpService")
 @Transactional
 public class RsvpService {
 
