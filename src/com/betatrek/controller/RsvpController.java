@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Date;
+import java.util.Calendar;
 
 import com.betatrek.domain.Rsvp;
 import com.betatrek.service.UniqueIdentifierGenerator;
@@ -26,8 +27,8 @@ public class RsvpController {
     protected static Logger logger = Logger.getLogger("RsvpController");
     
     @Resource(name="RsvpService")
-    @Resource(name="UniqueIdentifierGenerator")
     private RsvpService rsvp_service;
+    @Resource(name="UniqueIdentifierGenerator")
     private UniqueIdentifierGenerator id_generator;
     
     @RequestMapping(value = "/addRsvp", method = RequestMethod.POST)
@@ -38,7 +39,12 @@ public class RsvpController {
             if (!EmailValidator.isValid(email)) return false;
             Rsvp rsvp = new Rsvp();
             rsvp.setEmail(email);
-            rsvp.setDatestamp(new Date());
+            Calendar cal = Calendar.getInstance();
+            cal.set( cal.HOUR_OF_DAY, 0 );
+            cal.set( cal.MINUTE, 0 );
+            cal.set( cal.SECOND, 0 );
+            cal.set( cal.MILLISECOND, 0 );
+            rsvp.setDatestamp(new Date(cal.getTime().getTime()));
             rsvp.setConfirm(false);
             rsvp.setId(id_generator.getNextId());
             return rsvp_service.add(rsvp);

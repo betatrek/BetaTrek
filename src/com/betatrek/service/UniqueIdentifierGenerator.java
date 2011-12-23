@@ -3,8 +3,8 @@ package com.betatrek.service;
 import java.security.SecureRandom;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.utils.HashSet;
-import java.utils.Set;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This class maintains a generator that can produce unique and secure random
@@ -28,8 +28,9 @@ public class UniqueIdentifierGenerator {
      * it difficult to predict or forge the ID
      * @return random hexidecimal identifier that has not used already
      */
-    public static String getNextId() {
+    public String getNextId() {
         while (true) {
+            String id;
             try {
                 // generate a random number
                 String randomNum = new Integer(prng.nextInt()).toString();
@@ -38,7 +39,7 @@ public class UniqueIdentifierGenerator {
                 byte[] result = MessageDigest.getInstance("SHA-1").digest(
                                     randomNum.getBytes());
                 
-                String id = hexEncode(result);
+                id = hexEncode(result);
             } catch (NoSuchAlgorithmException ex) {
                 System.err.println(ex);
             }
@@ -60,7 +61,7 @@ public class UniqueIdentifierGenerator {
      * Another popular alternative is to use a "Base64" encoding.
      * @return hexidecimal encoding of the given bytes
      */
-    static private String hexEncode( byte[] aInput){
+     private static String hexEncode( byte[] aInput){
         StringBuilder result = new StringBuilder();
         char[] digits = {'0', '1', '2', '3', '4','5','6','7','8','9','a','b','c','d','e','f'};
         for ( int idx = 0; idx < aInput.length; ++idx) {

@@ -44,10 +44,14 @@ public class RsvpService {
         public Rsvp mapRow(ResultSet result, int row_number) 
             throws SQLException {
             Rsvp rsvp = new Rsvp();
-            rsvp.setEmail(result.getString("email"));
-            rsvp.setDatestamp(result.getDate("datestamp"));
-            rsvp.setConfirm(result.getBoolean("confirm"));
-            rsvp.setId(result.getString("id"));
+            final String email = result.getString("email");
+            final Date datestamp = result.getDate("datestamp");
+            final boolean confirm = result.getBoolean("confirm");
+            final String id = result.getString("id");
+            rsvp.setEmail(email);
+            rsvp.setDatestamp(datestamp);
+            rsvp.setConfirm(confirm);
+            rsvp.setId(id);
             logger.debug(String.format(EMAIL_DEBUG, email));
             logger.debug(String.format(DATE_DEBUG, datestamp));
             logger.debug(String.format(CONFIRM_DEBUG, confirm));
@@ -72,14 +76,16 @@ public class RsvpService {
         parameters.put("confirm", confirm);
         parameters.put("id", id);
 
-        jdbcTemplate.update(sql, parameters);
+        jdbcTemplate.update(INSERT_COMMAND, parameters);
         return true;
     }
 
     public boolean isAlreadyRsvped(Rsvp rsvp) {
         String email = rsvp.getEmail();
         try {
-            Rsvp existing_rsvp = (Rsvp)jdbcTemplate.queryForObject(sql, mapper,
+            Rsvp existing_rsvp = (Rsvp)jdbcTemplate.queryForObject(
+                                                    SELECT_EMAIL_COMMAND, 
+                                                    mapper,
                                                     new Object[]{email});
             if (existing_rsvp == null) return false;
             // Otherwise the RSVP does already exist

@@ -1,5 +1,7 @@
 package com.betatrek.service;
 
+import java.util.regex.Pattern;
+
 public class EmailValidator {
 
     private static final String LOCAL_PART_SYNTAX =
@@ -11,7 +13,7 @@ public class EmailValidator {
     /** Precompiled pattern to match {@value #EMAIL_SYNTAX} */
     private static final Pattern validEmail = Pattern.compile(EMAIL_SYNTAX);
     
-    public boolean isValid(String email) {
+    public static boolean isValid(String email) {
         return validEmail.matcher(email).matches();
     }
 }
