@@ -19,7 +19,11 @@ public class UniqueIdentifierGenerator {
      * IDs
      */
     public UniqueIdentifierGenerator() {
-        prng = SecureRandom.getInstance("SHA1PRNG");
+        try {
+            prng = SecureRandom.getInstance("SHA1PRNG");
+        } catch (NoSuchAlgorithmException ex) {
+            System.err.println(ex);
+        }
         used_ids = new HashSet();
     }
     
@@ -30,8 +34,8 @@ public class UniqueIdentifierGenerator {
      */
     public String getNextId() {
         while (true) {
-            String id;
             try {
+                String id;
                 // generate a random number
                 String randomNum = new Integer(prng.nextInt()).toString();
                 
@@ -40,12 +44,13 @@ public class UniqueIdentifierGenerator {
                                     randomNum.getBytes());
                 
                 id = hexEncode(result);
+                
+                if (!used_ids.contains(id)) {
+                    used_ids.add(id);
+                    return id;
+                }
             } catch (NoSuchAlgorithmException ex) {
                 System.err.println(ex);
-            }
-            if (!used_ids.contains(id)) {
-                used_ids.add(id);
-                return id;
             }
         }
     }
