@@ -1,4 +1,4 @@
-<project name="Investub" default="compile" basedir="."> 
+<project name="BetaTrek" default="compile" basedir="."> 
 	
 	<property file="build.properties"/> 
     <property file="${user.home}/build.properties"/> 
@@ -6,9 +6,9 @@
     <property name="src.home"      value="${basedir}/src"/> 
     <property name="web.home"      value="${basedir}/web"/>
     <property name="war.home"      value="${basedir}/war"/>
-	<property name="warroot.name"      value="investub.war"/>
-	<property name="war.folder.name"   value="investub"/>
-        <property name="tomcat.home"   value="/tomcat/webapps/"/>
+	<property name="warroot.name"      value="betatrek.war"/>
+	<property name="war.folder.name"   value="betatrek"/>
+        <property name="tomcat.home"   value="/var/lib/tomcat6/webapps/"/>
 	
 	<target name="all" depends="clean,compile, warroot" description="Clean build and dist directories, then compile"/>
 	
