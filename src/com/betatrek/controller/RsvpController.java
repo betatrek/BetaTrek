@@ -16,6 +16,7 @@ import java.util.Calendar;
 import com.betatrek.domain.Rsvp;
 import com.betatrek.service.UniqueIdentifierGenerator;
 import com.betatrek.service.EmailValidator;
+import com.betatrek.service.RsvpService;
 
 /**
  * Handles and retrieves RSVP requests
