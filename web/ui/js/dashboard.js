@@ -211,4 +211,10 @@ $(document).ready(function() {
 			parent.after(row);
 		}
 	}
+    
+    // Function to add email to RSVP list database
+    function addRsvpToList() {
+        $.post('/controller/rsvp/addRsvp', {'rsvp': $('#rsvp').val()});
+        return false;
+    }
 });
