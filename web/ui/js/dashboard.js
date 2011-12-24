@@ -35,9 +35,9 @@ $(document).ready(function() {
 	// Hide the RSVP watermark on keypress
 	$('#rsvp').keypress(function(event){
 		// 13 is the enter key
-		if (event.keyCode == 13)
-			$(this).after('RSVPing....');
-		else
+		if (event.keyCode == 13) {
+            addRsvpToList();
+		} else
 			rsvp_watermark.fadeOut(time);	
 	}).blur(function(){
 		// Show the Search watermark if filed is empty
@@ -214,7 +214,8 @@ $(document).ready(function() {
     
     // Function to add email to RSVP list database
     function addRsvpToList() {
-        $.post('/controller/rsvp/addRsvp', {'rsvp': $('#rsvp').val()});
+        $(this).after('RSVPing....');
+        $.post('/betatrek/controller/rsvp/addRsvp', {'rsvp': $('#rsvp').val()});
         return false;
     }
 });
