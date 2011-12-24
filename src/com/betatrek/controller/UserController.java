@@ -53,7 +53,7 @@ public class UserController {
 
 		logger.debug("Received request to get user");
 		// Call UserService to get the User object of that name, if one exists
-		return userService.get(name);
+		return null;//userService.get(name);
 	}
 
 }
