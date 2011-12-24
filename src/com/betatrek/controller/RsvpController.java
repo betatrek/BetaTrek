@@ -29,7 +29,7 @@ public class RsvpController {
     
     @Resource(name="rsvpService")
     private RsvpService rsvp_service;
-    @Resource(name="UniqueIdentifierGenerator")
+    @Resource(name="uniqueIdentifierGenerator")
     private UniqueIdentifierGenerator id_generator;
     
     @RequestMapping(value = "/addRsvp", method = RequestMethod.POST)

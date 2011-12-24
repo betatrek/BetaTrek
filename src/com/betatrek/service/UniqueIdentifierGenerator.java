@@ -6,10 +6,13 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.stereotype.Service; 
+
 /**
  * This class maintains a generator that can produce unique and secure random
  * identifiers.
  */
+@Service("uniqueIdentifierGenerator")
 public class UniqueIdentifierGenerator {
     private SecureRandom prng;
     private Set used_ids;
