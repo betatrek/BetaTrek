@@ -27,7 +27,7 @@ public class RsvpController {
 
     protected static Logger logger = Logger.getLogger("RsvpController");
     
-    @Resource(name="RsvpService")
+    @Resource(name="rsvpService")
     private RsvpService rsvp_service;
     @Resource(name="UniqueIdentifierGenerator")
     private UniqueIdentifierGenerator id_generator;
