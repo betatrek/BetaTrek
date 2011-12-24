@@ -36,7 +36,7 @@ $(document).ready(function() {
 	$('#rsvp').keypress(function(event){
 		// 13 is the enter key
 		if (event.keyCode == 13) {
-            addRsvpToList();
+            $('#invitation').submit();
 		} else
 			rsvp_watermark.fadeOut(time);	
 	}).blur(function(){
