@@ -33,11 +33,11 @@ public class RsvpController {
     private UniqueIdentifierGenerator id_generator;
     
     @RequestMapping(value = "/addRsvp", method = RequestMethod.POST)
-    public @ResponseBody boolean addRsvp(
+    public @ResponseBody String addRsvp(
         @RequestParam("rsvp") String email) {
         logger.debug("Received request to add new RSVP");
         try {
-            if (!EmailValidator.isValid(email)) return false;
+            if (!EmailValidator.isValid(email)) return "invalid email false: " + email;
             Rsvp rsvp = new Rsvp();
             rsvp.setEmail(email);
             Calendar cal = Calendar.getInstance();
@@ -48,9 +48,9 @@ public class RsvpController {
             rsvp.setDatestamp(new Date(cal.getTime().getTime()));
             rsvp.setConfirm(false);
             rsvp.setId(id_generator.getNextId());
-            return rsvp_service.add(rsvp);
+            return email + " " + rsvp.getDatestamp() + " " +rsvp_service.add(rsvp);
         } catch (Exception ex) {
-            return false;
+            return "error false";
         }
     }
 }
