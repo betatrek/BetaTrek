@@ -50,7 +50,7 @@ public class RsvpController {
             rsvp.setId(id_generator.getNextId());
             return email + " " + rsvp.getDatestamp() + " " +rsvp_service.add(rsvp);
         } catch (Exception ex) {
-            return ex.getMessage();
+            return ex.getCause() + "\n\n" + ex.getStackTrace();
         }
     }
 }
