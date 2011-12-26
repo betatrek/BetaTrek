@@ -53,7 +53,7 @@ public class RsvpController {
             String error = ex.getCause() + "<br \><br \>"
             String[] stack_trace = ex.getStackTrace();
             for (String trace : stack_trace)
-                error += trace + "<br />"
+                error += trace + "<br />";
             return error;
         }
     }
