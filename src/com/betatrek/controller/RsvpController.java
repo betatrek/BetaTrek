@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Date;
 import java.util.Calendar;
+import java.lang.StackTraceElement;
 
 import com.betatrek.domain.Rsvp;
 import com.betatrek.service.UniqueIdentifierGenerator;
@@ -51,8 +52,8 @@ public class RsvpController {
             return email + " " + rsvp.getDatestamp() + " " +rsvp_service.add(rsvp);
         } catch (Exception ex) {
             String error = ex.getCause() + "<br /><br />";
-            String[] stack_trace = ex.getStackTrace();
-            for (String trace : stack_trace)
+            StackTraceElement[] stack_trace = ex.getStackTrace();
+            for (StackTraceElement trace : stack_trace)
                 error += trace + "<br />";
             return error;
         }
