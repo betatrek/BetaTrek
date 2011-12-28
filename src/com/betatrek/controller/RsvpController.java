@@ -53,7 +53,7 @@ public class RsvpController {
             rsvp.setId(id_generator.getNextId());
             // Create the application context
             ApplicationContext ctx =
-                new ClassPathXmlApplicationContext("/var/lib/tomcat6/webapps/betatrek/WEB-INF/applicationContext.xml");
+                new ClassPathXmlApplicationContext("applicationContext.xml");
             // Obtain a reference to our DAO
             RsvpService dao = (RsvpService) ctx.getBean("dao");
             return email + " " + rsvp.getDatestamp() + " " +rsvp_service.add(rsvp);
