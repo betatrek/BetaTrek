@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.Date;
 import java.util.Calendar;
@@ -49,6 +51,11 @@ public class RsvpController {
             rsvp.setDatestamp(new Date(cal.getTime().getTime()));
             rsvp.setConfirm(false);
             rsvp.setId(id_generator.getNextId());
+            // Create the application context
+            ApplicationContext ctx =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+            // Obtain a reference to our DAO
+            RsvpService dao = (RsvpService) ctx.getBean("dao");
             return email + " " + rsvp.getDatestamp() + " " +rsvp_service.add(rsvp);
         } catch (Exception ex) {
             String error = ex.getCause() + "<br /><br />";
