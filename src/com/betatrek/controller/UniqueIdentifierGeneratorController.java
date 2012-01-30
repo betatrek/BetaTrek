@@ -40,7 +40,7 @@ public class UniqueIdentifierGeneratorController {
     }
 
    @RequestMapping(value = "/addId", method = RequestMethod.POST)
-   public @ResponseBody String putId(@ResquestParam("id") String id) {
+   public @ResponseBody String putId(@RequestParam("id") String id) {
         logger.debug("Adding id: " + id);
         try {
             id_generator.addId(id);
