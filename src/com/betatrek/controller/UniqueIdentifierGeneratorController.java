@@ -45,7 +45,7 @@ public class UniqueIdentifierGeneratorController {
         try {
             id_generator.addId(id);
             return "Successful";
-        } (Exception ex) {
+        } catch (Exception ex) {
             String error = ex.getCause() + "<br /><br />";
             StackTraceElement[] stack_trace = ex.getStackTrace();
             for (StackTraceElement trace : stack_trace)
