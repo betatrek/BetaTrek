@@ -3,18 +3,19 @@
 
 
 /* TEAM */
-  Lead Front-end Developer: Dandré Allison
-  Site: betatrek.com
+  Chief Content Officer: Dandré Allison
+  Chief Executive Officer: Jerry Ward
+  Site: http://www.betatrek.com
   Twitter: 
-  Location: 
+  Location: San Francisco
 
 /* THANKS */
-  Names (& URL): 
+  Names (& URL): http://www.bin-co.com/php/scripts/load/
 
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
-  Software: Java
+  Software: Java, PHP
   
 
                                     

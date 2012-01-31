@@ -57,6 +57,13 @@ public class UniqueIdentifierGenerator {
             }
         }
     }
+
+    /**
+     * Used to update the set with already used ids
+     */
+     public void addId(String id) {
+         used_ids.add(id);
+     } 
     
     /**
      * The byte[] returned by MessageDigest does not have a nice

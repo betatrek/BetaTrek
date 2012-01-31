@@ -1,0 +1,2 @@
+Main-Class: HelloWorld
+Class-Path: JavaBridge.jar
