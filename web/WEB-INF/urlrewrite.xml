@@ -43,8 +43,8 @@
 
     <rule>
     	<name>Map index.html to index.php</name>
-    	<from>^/(index)$</from>
-    	<to>/php/($1).php</to>
+    	<from>^/(index|)$</from>
+    	<to>/php/index.php</to>
     </rule>
 
     <rule>
