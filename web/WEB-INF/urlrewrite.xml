@@ -35,7 +35,7 @@
 
     <rule>
        <name>Redirect no-www to www</name>
-       <condition name="host" operator="notequal">www.betatrek.com</condition>
+       <condition type="host" operator="notequal">www.betatrek.com</condition>
        <note>This rule directs the no-www subdomain to the www subdomain.</note>
        <from>(.*)</from>
        <to type="permanent-redirect">http://www.betatrek.com/$1</to>
@@ -43,7 +43,7 @@
 
     <rule>
     	<name>Map index.html to index.php</name>
-    	<from>^/(index|)$</from>
+    	<from>^$</from>
     	<to>/php/index.php</to>
     </rule>
 
