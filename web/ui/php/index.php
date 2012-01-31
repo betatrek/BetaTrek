@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="Dandre Allison">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <!--[if lte IE 7]>
     <style>
         .content { margin-right: -1px} /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
@@ -55,8 +55,8 @@
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 	<!-- scripts concatenated and minified via ant build script-->
-	<script src="js/plugins.js"></script>
-    <script src="js/dashboard.js"></script>
+	<script src="../js/plugins.js"></script>
+    <script src="../js/dashboard.js"></script>
     <!-- end scripts-->
     
     <script>
