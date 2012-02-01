@@ -44,7 +44,7 @@ if ($contains_stmt->num_rows == 0) {
 }
 
 // Request the invitation page again, this time with the $_SESSION set
-header('location: http://www.betatrek.com/index.php');
+header('location: http://www.betatrek.com');
 $contains_stmt->close();
 $insert_stmt->close();
 $mysql_conn->close();
