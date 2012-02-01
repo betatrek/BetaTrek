@@ -10,7 +10,7 @@
 -->
 <urlrewrite>
 
-    <!--<rule>
+    <rule>
         <note>
             The rule means that requests to /test/status/ will be redirected to /rewrite-status
             the url will be rewritten.
@@ -63,7 +63,7 @@
 	<from>^/addId/.*$</from>
 	<set type="status">404</set>
 	<to>null</to>
-    </rule>-->
+    </rule>
 
     <!--
 
