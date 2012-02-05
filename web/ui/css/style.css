@@ -452,11 +452,6 @@ label[for="search"] {
 	left: -370px;
 }
 
-/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
-header, section, footer, aside, nav, article, figure {
-	display: block;
-}
-
 #step {
 	margin-top: 21px;
 }
