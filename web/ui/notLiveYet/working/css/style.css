@@ -1,0 +1,713 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 16px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: betatrek blue
+ */
+
+::-moz-selection { background: #4a8af4; color: #fff; text-shadow: none; }
+::selection { background: #4a8af4; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #4a8af4; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; text-decoration-style: dotted; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+.accordion ul, .accordion ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid, select:valid { background-color: #77f077; }
+input:invalid, textarea:invalid, select:invalid { background-color: #f07777; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: Dandre Allison
+   ========================================================================== */
+/* Input Custom font */
+@font-face {
+	font-family: quadranta;
+	src: url('../res/quadranta.tff');
+}
+
+@font-face {
+	font-family: "Helvetica Neue Light";
+	src: url('../res/HelveticaNeueLTPro-Lt.otf');
+}
+
+.helvetica {
+	font-family: "Helvetica Neue Light";
+}
+
+.quadranta {
+	font-family: quadranta;
+}
+
+/* Creates a triangle using border transparency */
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 23px solid transparent;
+    border-bottom: 23px solid transparent;
+    float: left;
+    position: relative;
+}
+
+.whiteAndShadowed {
+	color: #fff;
+	text-shadow: 0 1px 0 #333;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+.betatrekLink {
+	text-decoration: none;
+}
+.betatrekLink:link {
+	color: #414958;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+.betatrekLink:visited {
+	color: #4e5869;
+	text-decoration: underline;
+}
+/* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+.betatrekLink:hover, .betatrekLink:active, .betatrekLink:focus { 
+	text-decoration: none;
+}
+
+/* Defines the style for the logo */
+.betatrekLogo {
+	font-size: 25px;
+	font-family: quadranta;
+	padding-top: 5px; /* Improves vertical centering */
+	/* Highlight */
+	text-shadow: 0 2px 3px #fff;
+}
+
+/* Extends line to customize */
+.betatrekHead {
+	padding: 14px 25px;
+	/* Highlight */
+	text-shadow: 0 2px 3px #fff;
+	background: #fdfdfd; /* Old browsers */
+	background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%);
+}
+
+/* An oval container with gradiant background */
+.ovalContainer {
+	margin: 0 8px;
+	box-shadow: inset #f00 1px;
+	border-radius: 25px;
+    box-shadow: 
+		inset 0 1px 1px -1px #000, /* top shadow */
+		0 1px 1px -1px #fff; /* bottom highlight */
+	background: #fdfdfd; /* Old browsers */
+	background: linear-gradient(top, #fdfdfd 0%,#bdbdbd 100%);
+}
+/* The inner component of the oval container */
+.ovalContainer .inner {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
+	text-align: center;
+}
+/* Extends ovalContainer */
+.ovalButton {
+	width: 110px;
+	padding: 11px 0;
+}
+.ovalButton:hover {
+	color: #4a8af4;	
+}
+.ovalButton:active {
+	background: #f0f0f0;
+	background: linear-gradient(top, #f0f0f0 0%,#b0b0b0 100%);
+}
+
+/* ============================================================
+   Defines the progress indicator
+   ============================================================ */
+.progress {
+	padding: 10px 0;
+	float: left;
+	width: 100%;
+	background: #272727;
+	background: linear-gradient(top, rgba(39,39,39,1) 0%,rgba(39,39,39,1) 91%,rgba(39,39,39,0.47) 100%);
+}
+/* Displayed in the sections */
+.progress .description {
+    font-size: 16px;
+    padding: 14px 5px 14px 40px;
+    float: left;
+    position: relative;
+    left: -23px;
+	color: #fff;
+}
+/* Creates the arrow tail effect */
+.progress .arrowTail {
+	margin-left: 25px;
+    z-index: 10;
+	border-left: 23px solid #272727; /* Match the background color */
+}
+/* Puts the first description on the appropriate z-index */
+.progress .first {
+    z-index: 9;
+}
+/* Positions the first arrowhead */
+.progress .firstArrowhead {
+    z-index: 9;
+    left: -23px;
+}
+/* Puts the second description on the appropriate z-index */
+.progress .second {
+    z-index: 8;
+    left: -46px;
+}
+/* Positions the second arrowhead */
+.progress .secondArrowhead {
+    z-index: 8;
+    left: -46px;
+}
+/* Puts the third description on the appropriate z-index */
+.progress .third {
+    z-index: 7;
+    left: -69px;
+}
+/* Positions the third arrowhead */
+.progress .thirdArrowhead {
+    z-index: 7;
+    left: -69px;
+}
+	/* ~~~~ Defines the color indications for step 1 ~~~~ */
+	.progress.step1 .first {
+		background: #4a8af4;
+	}
+	.progress.step1 .firstArrowhead {
+		border-left: 23px solid #4a8af4; /* Match the description background color*/
+	}
+	.progress.step1 .second,
+	.progress.step1 .third, .progress.step2 .third {
+		color: #7f7f7f;	
+		opacity: .3;
+	}
+	/* ~~~~ Defines the color indications for step 2 ~~~~ */
+	.progress.step2 .first, .progress.step3 .first {
+		background: #427cda;
+		color: #ccc;
+	}
+	.progress.step2 .firstArrowhead, .progress.step3 .firstArrowhead {
+		border-left: 23px solid #427cda; /* Match the description background color*/
+	}
+	.progress.step2 .second {
+		background: #4a8af4;
+	}
+	.progress.step2 .secondArrowhead {
+		border-left: 23px solid #4a8af4; /* Match the description background color*/
+	}
+	/* ~~~~ Defines the color indications for step 3 ~~~~ */
+	.progress.step3 .second {
+		background: #427cda;
+		color: #ccc;	
+	}
+	.progress.step3 .secondArrowhead {
+		border-left: 23px solid #427cda; /* Match the description background color*/	
+	}
+	.progress.step3 .third {
+		background: #4a8af4;
+		color: #fff;	
+	}
+	.progress.step3 .thirdArrowhead {
+		border-left: 23px solid #4A8AF4; /* Match the description background color*/	
+	}
+/* ============================================================
+   End of progress indicator definition
+   ============================================================ */
+
+/* Default input field styling */
+.defaultInputField {
+	padding: 4px 10px;
+	font-family: Helvetica;
+	color: #777; font-size: 16sp; text-align: center;
+	text-shadow: 0 1px 0 #333;
+	box-shadow: inset 0 3px 3px -3px #000;
+	border: none; border-radius: 5px;
+}
+
+/* Focused input field */
+.defaultInputField:focus {
+	background: #fcfcfc;
+	color: #4a8af4;
+	box-shadow: 
+		inset 0 3px 3px -3px #000, 
+		0 0 3px rgba(256,256,256,0.6);
+}
+
+/* Style the placeholder */
+.defaultInputField:-moz-placeholder, .hasPlaceholder {
+	background: #bebebe;
+	color: #fff;
+}
+.defaultInputField::-webkit-input-placeholder {
+	background: #bebebe;
+	color: #fff;
+}
+.defaultInputField:-ms-input-placeholder {
+	background: #bebebe;
+	color: #fff;
+}
+
+/* Hides label if browser is running JavaScript and has a placeholder replacement, 
+ * since we can provide placeholder support through JavaScript even if they don't
+ * support the placeholder attribute */
+.js .labelWithReplacement {
+	display: none;
+}
+
+/* Form action button styling */
+.formActionButton {
+	width: 55%; padding: 8px 8px 6px;
+	font-family: Helvetica; font-size: 15sp; line-height: 1; color: #fff; 
+	text-shadow: 0 1px 0 #333;
+	background: #979797;
+	border: none; border-radius: 29px;
+	box-shadow: 
+		inset 0 1px 0 1px #000, /* Top shadow */
+		inset 0 -14px 0 0 #7e7e7e; /* Bubble highlight */
+}
+.formActionButton:hover {
+	background: #6b94d6;
+	box-shadow: 
+		inset 0 1px 0 1px #000, /* Top shadow */
+		inset 0 -14px 0 0 #4a8af4; /* Bubble highlight */
+}
+.formActionButton:active {
+	color: #ccc;
+	background: #4a8af4;
+	box-shadow: inset 0 1px 3px 1px #000; /* Top shadow */
+}
+
+/* gives a black background and clear border */
+.blackWithClearBorder {
+	background: #151515; 
+	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.25) 0%,
+								rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%), #151515;
+	border-radius: 7px; box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.65);
+}
+
+/* modal window styling */
+.modal {
+	position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+	display: none;
+	z-index: 10000;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: opacity 500ms ease-in;
+}
+
+.modal.intermediate {
+	display: block;
+}
+
+.modal.active {
+	opacity: 1;
+}
+
+.modal > .content {
+	position: relative;
+	margin: 10% auto 0;
+	-webkit-animation: bounce 500ms linear;
+	-moz-animation: bounce 500ms linear;
+	box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+	border-radius: 7px;
+}
+
+.ie .modal > .content {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc);
+}
+
+.modal.minimise > .content {
+	-webkit-animation-name: minimise;
+	-moz-animation-name: minimise;
+}
+
+.modal .close {
+	text-decoration: none;
+}
+
+.modal .close .link {
+	color: #979797;
+	text-decoration: underline;
+}
+
+.modal .close .link:hover {
+	color: #4a8af4;
+}
+
+.modal .close:after {
+	position: absolute; top: -1em; right: -.75em; width: 1.5em; padding: 3px 1px 1px 2px;
+	display: block;
+	content: 'X';
+	font-size: 16px; text-decoration: none; text-align: center; font-weight: bold;
+	color: #fff;
+	text-shadow: none; 
+	background: #000;
+	border: 3px solid #fff; border-radius: 50%;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.ie8 .modal .close:after {
+	display: none;
+}
+
+.modal .close:focus:after,
+.modal .close:hover:after {
+	-webkit-transform: scale3d(1.1,1.1,1);
+	-moz-transform: scale(1.1,1.1);
+}
+
+.modal .close:focus:after {
+	outline: 1px solid #000;
+}
+
+/* modal positioning */
+.modalWindowPosition {
+	width: 370px;
+}
+.modalFormPosition {
+	text-align: center;
+	padding: 8px 16px;
+}
+
+/* Modal window animations */
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale3d(0.1,0.1,1);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+    -webkit-transform: scale3d(1.08,1.08,1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95,0.95,1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+    -webkit-transform: scale3d(1,1,1);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+@-webkit-keyframes minimise {
+  0% {
+    -webkit-transform: scale3d(1,1,1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.1,0.1,1);
+  }
+}
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: scale3d(0.1,0.1,1);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+    -moz-transform: scale3d(1.08,1.08,1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+    -moz-transform: scale3d(0.95,0.95,1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+    -moz-transform: scale3d(1,1,1);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+@-moz-keyframes minimise {
+  0% {
+    -moz-transform: scale3d(1,1,1);
+  }
+  100% {
+    -moz-transform: scale3d(0.1,0.1,1);
+  }
+}
+
+/* ============================================================
+   Signup page specific styling
+   ============================================================ */
+/* sign-up page background image*/
+.signupBackground {
+	width: 966px; height: 810px; margin: 0 auto;
+	background: url(../images/signupBackground.jpg) no-repeat;
+}
+
+.signupBackgroundColor {
+	background: #0f0f0f;
+}
+
+/* sign-up form positioning */
+.signupFormPosition {
+	position: relative;
+	left: 88px;
+	top: 386px;
+	height: 132px;
+	width: 233px;
+	padding: 60px 39px 9px;
+	text-align: center;
+}
+
+.niceVerticalSpacing {
+	margin: 4px 0;
+}
+
+/* ============================================================
+   End of signup specific styling
+   ============================================================ */
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+.cf {
+	/* for IE 6/7 */
+	*zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+	/* non-JS fallback */
+	*zoom: 1;
+}
+
+
+/* =============================================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+	/* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+	/* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+	* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+	a, a:visited { color: #444 !important; text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3{ page-break-after: avoid; }
+}
