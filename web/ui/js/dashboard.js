@@ -184,6 +184,48 @@ $(document).ready(function() {
 					$(id).valid();
 	});*/
 	
+	/* modal window */
+	bindModalToLink($('#begin_account_creation'), $('#creation'), $('body'));
+
+	// Function for binding a modal window to open when an object is pressed
+	function bindModalToLink($link, $modal, $body) {
+		$link.click(function(evt) {
+            evt.preventDefault();
+
+            $modal.addClass('intermediate');
+            setTimeout(function() {
+                $modal.addClass('active');
+            }, 50);
+
+            $modal.find('input').first().focus();
+            $modal.find('.close').click(function(evt) {
+                evt.preventDefault();
+                close();
+            });
+
+            $modal.find('form').submit(function(evt) {
+                close();
+            });
+
+            $body.keyup(function(evt) {
+                if(evt.keyCode === 27) { // ESC key
+                    close();
+                }
+            });
+
+        });
+
+		function close() {
+            $modal.addClass('minimise')
+            $modal.removeClass('active');
+            setTimeout(function() {
+                $respond.removeClass('intermediate minimise');
+            }, 550);
+            $body.unbind('keyup');
+            $modal.find('.close').unbind('click');
+        }
+	}
+	
 	// Function for adding a duplicate row to a subsection of the portfolio form, with incremented
 	// ids
 	function portfolioRowFocus() {

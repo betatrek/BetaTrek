@@ -27,7 +27,6 @@ $message = "<p>Hello from the BetaTrek team,<br/><br/>We are glad you have RSVPe
 $rsvp = $_POST['rsvp'];
 $contains_stmt->execute();
 $contains_stmt->store_result();
-echo " # of rows: " . $contains_stmt->num_rows . " ";
 if ($contains_stmt->num_rows == 0) {
 	if (filter_var($rsvp, FILTER_VALIDATE_EMAIL)) {
 		$_SESSION['success'] = true;
