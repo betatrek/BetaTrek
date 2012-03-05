@@ -49,11 +49,19 @@
         </war>
     </target>
     
-	<target name="deploywar" depends="compile, warroot">
+	<!-- This target deploys the servlet in the war to the tomcat server -->
+	<target name="deploywar" depends="compile, warroot" description="Deploys the war to the Tomcat server">
 		<delete dir="${tomcat.home}/${war.folder.name}*"/>
 	    <copy  todir="${tomcat.home}"> 
 	          <fileset file="${war.home}/${warroot.name}" />
 	    </copy> 
 	</target>
 	
+	<!-- This target doesn't update the servlet, but changes the front-end website and
+	     PHP code -->
+	<target name="deploywebsite" description="Deploys website code for the servlet without deploying the war">
+		<copy todir="${tomcat.home}/${war.folder.name}">
+			<fileset dir="${web.home}/ui" />
+		</copy>
+	</target>
 </project> 
