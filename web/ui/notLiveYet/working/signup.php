@@ -92,6 +92,7 @@
 			<!-- For the screen readers -->
 			<p class="visuallyhidden">Algorithmic advice no matter the class.</p>
 				<?php session_start(); ?>
+				<p><?php echo "PHP: "; echo $_SESSION; echo $_POST; ?></p>
 				<?php if ($_SESSION['message']): ?>
 				<p><?php echo $_SESSION['message']; ?></p>
 				<?php endif; ?>
