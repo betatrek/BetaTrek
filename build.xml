@@ -58,11 +58,25 @@
 	</target>
 	
 	<!-- This target doesn't update the servlet, but changes the front-end website and
-	     PHP code -->
+	     PHP code. Note: need to confirm this is a valid task. -->
 	<target name="deploywebsite" description="Deploys website code for the servlet without deploying the war">
-		<delete dir="${tomcat.home}/${war.folder.name}*"/>
-		<copy todir="${tomcat.home}/${war.folder.name}">
-			<fileset dir="${web.home}/ui" />
+		<delete dir="${tomcat.home}/${war.folder.name}" verbose="true">
+			<fileset file="**/*.html" />
+			<fileset file="**/*.php" />
+			<fileset file="**/*.inc" />
+			<fileset file="**/*.css" />
+			<fileset file="**/*.js" />
+			<fileset file="**/*.gz" />
+			<fileset file="**/*.png" />
+			<fileset file="**/*.jpg" />
+			<fileset file="**/*.txt" />
+			<fileset file="**/*.otf" />
+			<fileset file="**/*.ttf" />
+		</delete>
+		<copy todir="${tomcat.home}/${war.folder.name}" verbose="true">
+			<fileset dir="${web.home}/ui">
+				<exclude dir="${web.home}/ui/build" />
+			</fileset>
 		</copy>
 	</target>
 </project> 
