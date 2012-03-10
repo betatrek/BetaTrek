@@ -36,6 +36,7 @@ $mysql_conn->close();
  * @param $id A reference to store the ID of the user upon success to pass to method caller
  */
 function isAvailable($id) {
+	global $form_button_name, $form_button_value, $insert_statement;
 	$is_available = false;
 	// Make sure POST data is valid
 	if ($_POST[$form_button_name] == $form_button_value) {
@@ -78,6 +79,7 @@ function isAvailable($id) {
  * @param $id A reference to store the ID of the user to pass to the method caller
  */
 function isInDatabase($id) {
+	global $select_statement;
 	$select_statement->execute();
 	$select_statement->bind_result($id);
 	return $select_statement->fetch();
