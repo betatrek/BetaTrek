@@ -3,6 +3,8 @@
 include('mysql_connection.php');
 // Get Bcrypt one-way encryption algorithm
 include('bcrypt.php');
+// Get HTTP requesting
+include('load.inc');
 
 $form_button_name = 'create';
 $form_button_value = 'create';
