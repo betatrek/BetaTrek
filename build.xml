@@ -16,9 +16,8 @@
 		<delete dir="${build.home}/WEB-INF/classes"/> 
     </target>
 	
-	<target name="compile" description="Compile Java sources">
+	<target name="compile" depends="clean" description="Compile Java sources">
 		<!-- Compile Java classes as necessary --> 
-        <delete dir="${build.home}/WEB-INF/classes"/> 
 		<mkdir dir="${build.home}/WEB-INF/classes" />
 		<mkdir dir="${build.home}/WEB-INF/libs" />
         <copy  todir="${web.home}/WEB-INF/classes"> 
@@ -51,7 +50,8 @@
     
 	<!-- This target deploys the servlet in the war to the tomcat server -->
 	<target name="deploywar" depends="compile, warroot" description="Deploys the war to the Tomcat server">
-		<delete dir="${tomcat.home}/${war.folder.name}*"/>
+		<delete dir="${tomcat.home}/${war.folder.name}*" />
+		<mkdir dir="${tomcat.home}/${war.folder.name}" />
 	    <copy  todir="${tomcat.home}"> 
 	          <fileset file="${war.home}/${warroot.name}" />
 	    </copy> 
@@ -60,6 +60,7 @@
 	<!-- This target doesn't update the servlet, but changes the front-end website and
 	     PHP code -->
 	<target name="deploywebsite" description="Deploys website code for the servlet without deploying the war">
+		<delete dir="${tomcat.home}/${war.folder.name}*"/>
 		<copy todir="${tomcat.home}/${war.folder.name}">
 			<fileset dir="${web.home}/ui" />
 		</copy>
