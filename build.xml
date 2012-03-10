@@ -60,19 +60,6 @@
 	<!-- This target doesn't update the servlet, but changes the front-end website and
 	     PHP code. Note: need to confirm this is a valid task. -->
 	<target name="deploywebsite" description="Deploys website code for the servlet without deploying the war">
-		<delete dir="${tomcat.home}/${war.folder.name}">
-			<include file="**/*.html" />
-			<include file="**/*.php" />
-			<include file="**/*.inc" />
-			<include file="**/*.css" />
-			<include file="**/*.js" />
-			<include file="**/*.gz" />
-			<include file="**/*.png" />
-			<include file="**/*.jpg" />
-			<include file="**/*.txt" />
-			<include file="**/*.otf" />
-			<include file="**/*.ttf" />
-		</delete>
 		<copy todir="${tomcat.home}/${war.folder.name}">
 			<fileset dir="${web.home}/ui">
 				<exclude dir="${web.home}/ui/build" />

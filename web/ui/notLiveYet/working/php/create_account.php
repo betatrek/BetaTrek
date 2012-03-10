@@ -12,9 +12,9 @@ $select_statement = $mysql_conn->prepare("SELECT (id) FROM users WHERE email=?")
                     die("Prepare failed: (" . $mysql_conn->errno . ") " . $mysql_conn->error);
 $select_statement->bind_param('s', $email);
 // Prepared statement to insert a new user into the database
-$insert_statement = $mysql_conn->prepare("INSERT INTO users (email,password,country,state,id) VALUES (?,?,?,?,?)") or
+$insert_statement = $mysql_conn->prepare("INSERT INTO users (email,password,country,state,id,datestamp) VALUES (?,?,?,?,?,?)") or
                     die("Prepare failed: (" . $mysql_conn->errno . ") " . $mysql_conn->error);
-$insert_statement->bind_param('sssss');
+$insert_statement->bind_param('ssssss', $email, $password, $country, $state, $id, $datestamp);
 
 if (isAvailable($id)) {
 	// Start a session
@@ -51,6 +51,9 @@ function isAvailable($id) {
 			if (isInDatabase($id))
 				$_SESSION['message'] = "That email address conflicts with one of an existing user.";
 			else {
+				$datestamp = date('Y-m-d');
+				// id is a secure and unique randomly generated identifier
+				$id = load('http://www.betatrek.com/betatrek/controller/id/getId');
 				$insert_statement->execute();
 				if ($insert_statement->affected_rows > 0) {
 					//TODO: send email confirmation link and update database
