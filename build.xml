@@ -61,9 +61,7 @@
 	     PHP code. Note: need to confirm this is a valid task. -->
 	<target name="deploywebsite" description="Deploys website code for the servlet without deploying the war">
 		<copy todir="${tomcat.home}/${war.folder.name}">
-			<fileset dir="${web.home}/ui">
-				<exclude dir="${web.home}/ui/build" />
-			</fileset>
+			<fileset dir="${web.home}/ui" />
 		</copy>
 	</target>
 </project> 
