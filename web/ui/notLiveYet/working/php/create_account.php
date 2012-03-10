@@ -26,12 +26,16 @@ if (isAvailable($id)) {
 	// set variables in the session
 	$_SESSION['id'] = $id;
 	$_SESSION['HTTP_USER_AGENT'] = $bcrypt->encrypt($_SERVER['HTTP_USER_AGENT']);
+	header('location: portfolio_creation.html');
+} else {
+	header('location: signup.html');
 }
 
 // Close the MySQL connection
 $select_statement->close();
-//$update_statement->close();
+$insert_statement->close();
 $mysql_conn->close();
+exit;
 
 /**
  * Confirms that the attempted new account doesn't conflict with an existing account.
