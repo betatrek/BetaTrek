@@ -91,6 +91,9 @@
 		<div class="main signupBackground">
 			<!-- For the screen readers -->
 			<p class="visuallyhidden">Algorithmic advice no matter the class.</p>
+				<?php if ($_SESSION['message']): ?>
+				<p><?php echo $_SESSION['message']; ?></p>
+				<?php endif; ?>
 			<!-- Sign up form -->
 			<form id="signup" class="signupFormPosition" action="">
 				<p class="visuallyhidden">Begin Here</p>

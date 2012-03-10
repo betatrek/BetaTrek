@@ -28,7 +28,7 @@ if (isAvailable($id)) {
 	$_SESSION['HTTP_USER_AGENT'] = $bcrypt->encrypt($_SERVER['HTTP_USER_AGENT']);
 	header('location: ../portfolio_creation.html');
 } else {
-	header('location: ../signup.html');
+	header('location: ../signup.php');
 }
 
 // Close the MySQL connection
