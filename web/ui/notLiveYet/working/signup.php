@@ -57,6 +57,11 @@ if (isAvailable($id)) {
 	$_SESSION['id'] = $id;
 	$_SESSION['HTTP_USER_AGENT'] = $bcrypt->encrypt($_SERVER['HTTP_USER_AGENT']);
 	header('location: portfolio_creation.html');
+	// Close the MySQL connection
+	$select_statement->close();
+	$insert_statement->close();
+	$mysql_conn->close();
+	exit;
 } else {
 	//header('location: ../signup.php');
 }
@@ -65,7 +70,6 @@ if (isAvailable($id)) {
 $select_statement->close();
 $insert_statement->close();
 $mysql_conn->close();
-exit;
 }
 
 /**
@@ -264,7 +268,7 @@ function isInDatabase($id) {
 				<div class="betatrekHead betatrekLogo">
 				    <a class="betatrekLink" href="">betatrek</a>
 				</div>
-                <form id="create_account" method="post" action="php/create_account.php"
+                <form id="create_account" method="post" action=""
 					  class="modalFormPosition">
 					<span class="whiteAndShadowed niceVerticalSpacing">
 						  Create a New Account
