@@ -26,11 +26,9 @@ if (isAvailable($id)) {
 	// set variables in the session
 	$_SESSION['id'] = $id;
 	$_SESSION['HTTP_USER_AGENT'] = $bcrypt->encrypt($_SERVER['HTTP_USER_AGENT']);
-	//http_redirect('../portfolio_creation.html');
 	header('location: ../portfolio_creation.html');
 } else {
-	//header('location: ../signup.php')
-	load('../signup.php', array('post_data' => array('message' => $_SESSION['message']), 'session' => true));
+	header('location: ../signup.php');
 }
 
 // Close the MySQL connection
