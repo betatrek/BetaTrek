@@ -30,7 +30,8 @@ if (isAvailable($id)) {
 	header('location: ../portfolio_creation.html');
 } else {
 	//header('location: ../signup.php')
-	http_redirect('../signup.php', array('message' => $_SESSION['message']), true);
+	load('../signup.php', array('post_data' => array('message' => $_SESSION['message']), 
+	     'session' => true);
 }
 
 // Close the MySQL connection
