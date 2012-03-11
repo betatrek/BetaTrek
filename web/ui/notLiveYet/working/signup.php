@@ -1,5 +1,5 @@
-<?php session_start(); ?>
 <!DOCTYPE HTML>
+<?php session_start(); ?>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
@@ -168,7 +168,7 @@
 				<div class="betatrekHead betatrekLogo">
 				    <a class="betatrekLink" href="">betatrek</a>
 				</div>
-                <form id="create_account" method="post" action=""
+                <form id="create_account" method="post" action="php/create_account.php"
 					  class="modalFormPosition">
 					<span class="whiteAndShadowed niceVerticalSpacing">
 						  Create a New Account
