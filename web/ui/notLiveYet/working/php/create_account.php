@@ -6,6 +6,9 @@ include('bcrypt.php');
 // Get HTTP requesting
 include('load.inc');
 
+// Start a session
+session_start();
+
 $form_button_name = 'create';
 $form_button_value = 'create';
 
@@ -19,9 +22,7 @@ $insert_statement = $mysql_conn->prepare("INSERT INTO users (email,password,coun
 $insert_statement->bind_param('ssssss', $email, $password, $country, $state, $id, $datestamp);
 
 if (isAvailable($id)) {
-	// Start a session
-	session_start();
-	// Protext against session fixation attacks
+	// Protect against session fixation attacks
 	session_regenerate_id(true);
 	// set variables in the session
 	$_SESSION['id'] = $id;
