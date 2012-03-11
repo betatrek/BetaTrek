@@ -28,6 +28,7 @@
     <![endif]-->
 <script src="js/libs/modernizr-2.0.6.min.js"></script>
 <?php
+if ($_POST['create'] == 'create') {
 // Get MySQL connection
 include('php/mysql_connection.php');
 // Get Bcrypt one-way encryption algorithm
@@ -65,6 +66,7 @@ $select_statement->close();
 $insert_statement->close();
 $mysql_conn->close();
 exit;
+}
 
 /**
  * Confirms that the attempted new account doesn't conflict with an existing account.
