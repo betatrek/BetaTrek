@@ -56,7 +56,7 @@ function isAvailable($id) {
 		if ($agree_with_tos) {
 			// Confirm the email doesn't conflict with that of an existing user
 			if (isInDatabase($id))
-				$_SESSION['message'] = "That email address conflicts with one of an existing user.";
+				$_POST['message'] = "That email address conflicts with one of an existing user.";
 			else {
 				$datestamp = date('Y-m-d');
 				// id is a secure and unique randomly generated identifier
@@ -66,14 +66,14 @@ function isAvailable($id) {
 					//TODO: send email confirmation link and update database
 					$is_available = true;
 				} else {
-					$_SESSION['message'] = "Sorry, we incountered an issue creating this new account, " .
+					$_POST['message'] = "Sorry, we incountered an issue creating this new account, " .
 					                       "please try again later.";
 					// TODO: maybe log information about this if it ever occurs?
 				}
 			}
 		// Otherwise tell user to agree before continuing
 		} else {
-			$_SESSION['message'] = "We require that you agree to the Terms of Service before continuing.";
+			$_POST['message'] = "We require that you agree to the Terms of Service before continuing.";
 		}
 	} 
 	
