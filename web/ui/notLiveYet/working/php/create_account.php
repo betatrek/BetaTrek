@@ -43,13 +43,14 @@ exit;
  * @param $id A reference to store the ID of the user upon success to pass to method caller
  */
 function isAvailable($id) {
-	global $form_button_name, $form_button_value, $insert_statement;
+	global $form_button_name, $form_button_value, $insert_statement, $bcrypt;
+	global $email, $password, $country, $state, $id, $datestamp;
 	$is_available = false;
 	// Make sure POST data is valid
 	if ($_POST[$form_button_name] == $form_button_value) {
 		// Grab the form input data
 		$email = $_POST['email'];
-		$password = $_POST['password'];
+		$password = $bcrypt->encrypt($_POST['password']);
 		$country = $_POST['country']; 
 		$state = $_POST['state'];
 		$agree_with_tos = $_POST['agree'];
@@ -67,7 +68,7 @@ function isAvailable($id) {
 					//TODO: send email confirmation link and update database
 					$is_available = true;
 				} else {
-					$_SESSION['message'] = "Sorry, we incountered an issue creating this new account, " .
+					$_SESSION['message'] = "Sorry, we encountered an issue creating this new account, " .
 					                       "please try again later.";
 					// TODO: maybe log information about this if it ever occurs?
 				}

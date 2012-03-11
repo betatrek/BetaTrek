@@ -120,6 +120,5 @@ class Bcrypt {
   }
 }
 
-global $bcrypt;
 $bcrypt = new Bcrypt();
 ?>

@@ -9,6 +9,7 @@ include('bcrypt.php');
 function page_protect() {
 	session_start();
 	
+	global $bcyrpt;
 	/* Secure against Session Hijacking by confirming user agent */
 	if (isset($_SESSION['HTTP_USER_AGENT']) && 
 		!$bcyrpt->verify($_SESSION['HTTP_USER_AGENT'], $_SERVER['HTTP_USER_AGENT'])) {
