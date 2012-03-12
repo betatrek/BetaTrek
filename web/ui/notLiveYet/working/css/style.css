@@ -479,15 +479,12 @@ table { border-collapse: collapse; border-spacing: 0; }
 	opacity: 0;
 	transition: opacity 500ms ease-in;
 }
-
 .modal.intermediate {
 	display: block;
 }
-
 .modal.active {
 	opacity: 1;
 }
-
 .modal > .content {
 	position: relative;
 	margin: 10% auto 0;
@@ -496,29 +493,23 @@ table { border-collapse: collapse; border-spacing: 0; }
 	box-shadow: 0 3px 20px rgba(0,0,0,0.9);
 	border-radius: 7px;
 }
-
 .ie .modal > .content {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc);
 }
-
 .modal.minimise > .content {
 	-webkit-animation-name: minimise;
 	-moz-animation-name: minimise;
 }
-
 .modal .close {
 	text-decoration: none;
 }
-
 .modal .close .link {
 	color: #979797;
 	text-decoration: underline;
 }
-
 .modal .close .link:hover {
 	color: #4a8af4;
 }
-
 .modal .close:after {
 	position: absolute; top: -1em; right: -.75em; width: 1.5em; padding: 3px 1px 1px 2px;
 	display: block;
@@ -530,17 +521,14 @@ table { border-collapse: collapse; border-spacing: 0; }
 	border: 3px solid #fff; border-radius: 50%;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-
 .ie8 .modal .close:after {
 	display: none;
 }
-
 .modal .close:focus:after,
 .modal .close:hover:after {
 	-webkit-transform: scale3d(1.1,1.1,1);
 	-moz-transform: scale(1.1,1.1);
 }
-
 .modal .close:focus:after {
 	outline: 1px solid #000;
 }

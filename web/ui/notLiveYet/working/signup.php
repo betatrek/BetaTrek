@@ -92,9 +92,6 @@
 		<div class="main signupBackground">
 			<!-- For the screen readers -->
 			<p class="visuallyhidden">Algorithmic advice no matter the class.</p>
-				<?php if (isset($_SESSION['message'])): ?>
-					<p class="whiteAndShadowed"><?php echo $_SESSION['message']; ?></p>
-				<?php endif; ?>
 			<!-- Sign up form -->
 			<form id="signup" class="signupFormPosition" action="">
 				<p class="visuallyhidden">Begin Here</p>
@@ -119,11 +116,17 @@
 			<!-- end Sign up form -->
 			
 			<!-- account sign in window -->
-			<div id="login" class="modal">
+			<div id="login" class="modal 
+				 <?php if($_SESSION['action']=='login'): ?>active<?php endif; ?>">
 			<div class="content modalWindowPosition blackWithClearBorder">
 				<div class="betatrekHead betatrekLogo">
 				    <a class="betatrekLink" href="">betatrek</a>
 				</div>
+				<?php if (isset($_SESSION['message'])): ?>
+					<p class="whiteAndShadowed niceVerticalSpacing">
+						<?php echo $_SESSION['message']; ?>
+					</p>
+				<?php endif; ?>
                 <form id="sign_into_account" method="post" action="php/login.php"
 					  class="modalFormPosition">
 					<span class="whiteAndShadowed niceVerticalSpacing" id="login_title">
@@ -163,11 +166,17 @@
 			<!-- end account sign in window -->
 			
 			<!-- creation window -->
-            <div id="creation" class="modal">
+            <div id="creation" class="modal
+				 <?php if($_SESSION['action']=='create'): ?>active<?php endif; ?>">
 	 		<div class="content modalWindowPosition blackWithClearBorder">
 				<div class="betatrekHead betatrekLogo">
 				    <a class="betatrekLink" href="">betatrek</a>
 				</div>
+				<?php if (isset($_SESSION['message'])): ?>
+					<p class="whiteAndShadowed niceVerticalSpacing">
+						<?php echo $_SESSION['message']; ?>
+					</p>
+				<?php endif; ?>
                 <form id="create_account" method="post" action="php/create_account.php"
 					  class="modalFormPosition">
 					<span class="whiteAndShadowed niceVerticalSpacing">
